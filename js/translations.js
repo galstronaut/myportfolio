@@ -504,7 +504,7 @@ const interfaceTranslations = {
     gisHeading: "GIS <span class=\"amp\">&</span> <em>Analisis Spasial</em>", gisDescription: "Pemetaan tematik, analisis keruangan, dan pengolahan data geospasial.",
     designCopy: "Identitas merek, visual kampanye, hingga apparel dirancang agar setiap karya punya karakter yang mudah dikenali dan terasa dekat.",
     visualHeading: "Grafis <span class=\"amp\">&</span> <em>Kreatif</em>", visualDescription: "Identitas merek, desain poster, apparel teknis, web design, dan media visual.",
-    filterAllVisual: "Semua", filterDesignVisual: "Desain Grafis", filterPhotoVisual: "Fotografi", filterOutfitVisual: "Desain Baju"
+    filterAllVisual: "Semua", filterDesignVisual: "Desain Grafis", filterPhotoVisual: "Fotografi", filterOutfitVisual: "Desain Baju", viewProject: "Lihat Proyek"
   },
   en: {
     navSpatial: "Spatial Work", navDesign: "Design Studio",
@@ -512,7 +512,7 @@ const interfaceTranslations = {
     gisHeading: "GIS <span class=\"amp\">&</span> <em>Spatial Analysis</em>", gisDescription: "Thematic mapping, spatial analysis, and geospatial data processing.",
     designCopy: "From brand identity and campaign visuals to apparel, each piece is shaped to feel distinctive, recognisable, and close to its audience.",
     visualHeading: "Graphic <span class=\"amp\">&</span> <em>Creative</em>", visualDescription: "Brand identity, poster design, technical apparel, web design, and visual media.",
-    filterAllVisual: "All", filterDesignVisual: "Graphic Design", filterPhotoVisual: "Photography", filterOutfitVisual: "Apparel Design"
+    filterAllVisual: "All", filterDesignVisual: "Graphic Design", filterPhotoVisual: "Photography", filterOutfitVisual: "Apparel Design", viewProject: "View Project"
   },
   ja: {
     navSpatial: "空間プロジェクト", navDesign: "デザインスタジオ",
@@ -520,7 +520,7 @@ const interfaceTranslations = {
     gisHeading: "GIS <span class=\"amp\">&</span> <em>空間分析</em>", gisDescription: "主題図作成、空間分析、地理空間データ処理。",
     designCopy: "ブランドアイデンティティ、キャンペーンビジュアル、アパレルまで、一つひとつの作品に覚えやすく親しみのある個性を与えます。",
     visualHeading: "グラフィック <span class=\"amp\">&</span> <em>クリエイティブ</em>", visualDescription: "ブランドアイデンティティ、ポスターデザイン、テクニカルアパレル、Webデザイン、ビジュアルメディア。",
-    filterAllVisual: "すべて", filterDesignVisual: "グラフィックデザイン", filterPhotoVisual: "写真", filterOutfitVisual: "アパレルデザイン"
+    filterAllVisual: "すべて", filterDesignVisual: "グラフィックデザイン", filterPhotoVisual: "写真", filterOutfitVisual: "アパレルデザイン", viewProject: "プロジェクトを見る"
   },
   ko: {
     navSpatial: "공간 프로젝트", navDesign: "디자인 스튜디오",
@@ -528,7 +528,7 @@ const interfaceTranslations = {
     gisHeading: "GIS <span class=\"amp\">&</span> <em>공간 분석</em>", gisDescription: "주제도 제작, 공간 분석, 지리공간 데이터 처리.",
     designCopy: "브랜드 아이덴티티와 캠페인 비주얼부터 의류까지, 모든 작업에 쉽게 기억되고 친근하게 느껴지는 개성을 담습니다.",
     visualHeading: "그래픽 <span class=\"amp\">&</span> <em>크리에이티브</em>", visualDescription: "브랜드 아이덴티티, 포스터 디자인, 테크니컬 의류, 웹 디자인, 비주얼 미디어.",
-    filterAllVisual: "전체", filterDesignVisual: "그래픽 디자인", filterPhotoVisual: "사진", filterOutfitVisual: "의류 디자인"
+    filterAllVisual: "전체", filterDesignVisual: "그래픽 디자인", filterPhotoVisual: "사진", filterOutfitVisual: "의류 디자인", viewProject: "프로젝트 보기"
   },
   ru: {
     navSpatial: "Пространственные работы", navDesign: "Студия дизайна",
@@ -536,7 +536,7 @@ const interfaceTranslations = {
     gisHeading: "ГИС <span class=\"amp\">&</span> <em>Пространственный анализ</em>", gisDescription: "Тематическое картографирование, пространственный анализ и обработка геоданных.",
     designCopy: "От айдентики бренда и кампаний до одежды — каждая работа создаётся с узнаваемым характером и близким людям образом.",
     visualHeading: "Графика <span class=\"amp\">&</span> <em>Креатив</em>", visualDescription: "Айдентика бренда, дизайн плакатов, техническая одежда, веб-дизайн и визуальные медиа.",
-    filterAllVisual: "Все", filterDesignVisual: "Графический дизайн", filterPhotoVisual: "Фотография", filterOutfitVisual: "Дизайн одежды"
+    filterAllVisual: "Все", filterDesignVisual: "Графический дизайн", filterPhotoVisual: "Фотография", filterOutfitVisual: "Дизайн одежды", viewProject: "Смотреть проект"
   }
 };
 

@@ -456,7 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>`
         : `<div class="project-info-bar">
             <span><i class="fa-solid fa-circle-info"></i> ${categoryLabel}</span>
-            <span class="project-open-label">Lihat proyek <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            <span class="project-open-label">${i18nData[currentLang]?.viewProject || "Lihat Proyek"} <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </div>`;
 
       card.innerHTML = `
