@@ -180,15 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Profile Images: Dark mode uses itsgal.png & kesatria2.png, Light mode uses profil.png & robot2.png
+    // Profile Images: Dark mode uses itsgal.webp & kesatria2.png, Light mode uses profil.webp & robot2.webp
     const baseImg = document.getElementById("baseImg");
     const revealImg = document.getElementById("revealImg");
     if (theme === "dark") {
-      if (baseImg) baseImg.src = "images/profile/gal.png";
-      if (revealImg) revealImg.src = "images/profile/kesatria2.png";
+      if (baseImg) baseImg.src = "images/profile/gal.webp";
+      if (revealImg) revealImg.src = "images/profile/kesatria.webp";
     } else {
-      if (baseImg) baseImg.src = "images/profile/profil.png";
-      if (revealImg) revealImg.src = "images/profile/robot2.png";
+      if (baseImg) baseImg.src = "images/profile/profil.webp";
+      if (revealImg) revealImg.src = "images/profile/robot2.webp";
     }
   }
 
@@ -584,53 +584,53 @@ document.addEventListener("DOMContentLoaded", () => {
   // 39 Foto dikelompokkan dalam 5 folder bahasa Inggris dengan judul puitis & narasi mendalam
   const photoSeries = [
     // --- HORIZON ---
-    { id: "horizon-01", img: "images/fotografi/horizon/20240707_193603.jpg", title: "Bisikan Semburat Jingga", type: "Horizon", category: "horizon", desc: "Ketika sang surya tenggelam perlahan di balik cakrawala, menyisakan pendar jingga yang membisikkan salam perpisahan pada hari yang lelah." },
-    { id: "horizon-02", img: "images/fotografi/horizon/20250315_015908.jpg", title: "Batas Sunyi Tengah Malam", type: "Horizon", category: "horizon", desc: "Di antara gelapnya semesta dan garis batas bumi yang tenang, malam membentangkan selimut hening tanpa batas." },
-    { id: "horizon-03", img: "images/fotografi/horizon/20250401_170829.jpg", title: "Tarian Lembayung Khatulistiwa", type: "Horizon", category: "horizon", desc: "Awan gemawan merajut warna tembaga di ufuk barat, memantulkan asa yang tak pernah padam di ujung pandang." },
-    { id: "horizon-04", img: "images/fotografi/horizon/20260616_174542.jpg", title: "Kala Langit Memeluk Senja", type: "Horizon", category: "horizon", desc: "Siluet bukit terdiam syahdu saat langit meluruhkan cahayanya, menyisakan gradasi ungu dan biru yang memikat jiwa." },
-    { id: "horizon-05", img: "images/fotografi/horizon/f2.jpg", title: "Melodi Merah Muda di Batas Ufuk", type: "Horizon", category: "horizon", desc: "Semburat merah muda dan kapas awan berpadu lembut, melukiskan ketenangan yang melampaui batas pandangan insan." },
-    { id: "horizon-06", img: "images/fotografi/horizon/fg5.jpg", title: "Pintu Waktu di Ujung Samudra", type: "Horizon", category: "horizon", desc: "Sebuah garis lurus tempat langit dan bumi saling menyentuh, menyimpan rahasia tentang esok yang penuh harapan." },
+    { id: "horizon-01", img: "images/fotografi/horizon/20240707_193603.webp", title: "Bisikan Semburat Jingga", type: "Horizon", category: "horizon", desc: "Ketika sang surya tenggelam perlahan di balik cakrawala, menyisakan pendar jingga yang membisikkan salam perpisahan pada hari yang lelah." },
+    { id: "horizon-02", img: "images/fotografi/horizon/20250315_015908.webp", title: "Batas Sunyi Tengah Malam", type: "Horizon", category: "horizon", desc: "Di antara gelapnya semesta dan garis batas bumi yang tenang, malam membentangkan selimut hening tanpa batas." },
+    { id: "horizon-03", img: "images/fotografi/horizon/20250401_170829.webp", title: "Tarian Lembayung Khatulistiwa", type: "Horizon", category: "horizon", desc: "Awan gemawan merajut warna tembaga di ufuk barat, memantulkan asa yang tak pernah padam di ujung pandang." },
+    { id: "horizon-04", img: "images/fotografi/horizon/20260616_174542.webp", title: "Kala Langit Memeluk Senja", type: "Horizon", category: "horizon", desc: "Siluet bukit terdiam syahdu saat langit meluruhkan cahayanya, menyisakan gradasi ungu dan biru yang memikat jiwa." },
+    { id: "horizon-05", img: "images/fotografi/horizon/f2.webp", title: "Melodi Merah Muda di Batas Ufuk", type: "Horizon", category: "horizon", desc: "Semburat merah muda dan kapas awan berpadu lembut, melukiskan ketenangan yang melampaui batas pandangan insan." },
+    { id: "horizon-06", img: "images/fotografi/horizon/fg5.webp", title: "Pintu Waktu di Ujung Samudra", type: "Horizon", category: "horizon", desc: "Sebuah garis lurus tempat langit dan bumi saling menyentuh, menyimpan rahasia tentang esok yang penuh harapan." },
 
     // --- OCEAN ---
-    { id: "ocean-01", img: "images/fotografi/ocean/20240625_144456.jpg", title: "Riak Abadi Pesisir Karang", type: "Ocean", category: "ocean", desc: "Hantaman air asin yang tak kenal lelah, mengukir ketabahan pada dinding karang purba yang berdiri kokoh." },
-    { id: "ocean-02", img: "images/fotografi/ocean/20240630_153618.jpg", title: "Kedalaman Biru Samudra", type: "Ocean", category: "ocean", desc: "Warna biru yang menyimpan seribu kisah tak terucap, mengalir bebas mengikuti kehendak angin lepas." },
-    { id: "ocean-03", img: "images/fotografi/ocean/20240801_103307.jpg", title: "Nyanyian Buih Putih", type: "Ocean", category: "ocean", desc: "Gelombang yang datang membawa sejuknya laut dalam, lalu bersujud lembut di atas hamparan pasir putih yang hangat." },
-    { id: "ocean-04", img: "images/fotografi/ocean/20250405_232104.jpg", title: "Keheningan Arus Malam", type: "Ocean", category: "ocean", desc: "Bahkan samudra yang bergemuruh belajar untuk bernapas perlahan saat rembulan menjaga tidurnya." },
-    { id: "ocean-05", img: "images/fotografi/ocean/20251212_202653.jpg", title: "Jejak Pasang di Tepi Waktu", type: "Ocean", category: "ocean", desc: "Garis pantai yang selalu berubah namun selalu ada, merefleksikan dinamika kehidupan yang terus mengalir." },
-    { id: "ocean-06", img: "images/fotografi/ocean/20260105_065940.jpg", title: "Fajar Keemasan di Laut Lepas", type: "Ocean", category: "ocean", desc: "Kilau mentari pagi menyapa riak ombak pertama, melahirkan hari baru dengan kilau zamrud yang berkilauan." },
-    { id: "ocean-07", img: "images/fotografi/ocean/20260105_070955.jpg", title: "Pecahan Gelombang Pagi", type: "Ocean", category: "ocean", desc: "Percikan air laut yang beterbangan bagai butiran intan, merayakan kebebasan di alam samudra nan megah." },
-    { id: "ocean-08", img: "images/fotografi/ocean/20260419_203908.jpg", title: "Gradasi Pualam Pesisir", type: "Ocean", category: "ocean", desc: "Dari toska terang hingga biru gelap palung laut, simfoni warna air yang memanjakan setiap pasang mata." },
-    { id: "ocean-09", img: "images/fotografi/ocean/20260608_202441.jpg", title: "Pelukan Tanjung Karang", type: "Ocean", category: "ocean", desc: "Daratan yang menjorok berani menantang luasnya lautan, sebuah benteng alam yang setia menjaga pesisir." },
-    { id: "ocean-10", img: "images/fotografi/ocean/f1.jpg", title: "Sang Penjaga Batas Samudra", type: "Ocean", category: "ocean", desc: "Tebing karst terjal berdiri anggun, menahan deburan pasang dengan keteguhan yang tak tergoyahkan zaman." },
-    { id: "ocean-11", img: "images/fotografi/ocean/fg1.jpg", title: "Gemuruh Ombak Berirama", type: "Ocean", category: "ocean", desc: "Gulungan air yang perkasa kembali pulang ke pelukan pantai, membawakan simfoni alam tertua di bumi." },
-    { id: "ocean-12", img: "images/fotografi/ocean/fg2.jpg", title: "Cahaya Emas Tepian Air", type: "Ocean", category: "ocean", desc: "Refleksi kehangatan langit senja berpendar di atas basahnya pasir, menghadirkan kedamaian yang tak ternilai." },
-    { id: "ocean-13", img: "images/fotografi/ocean/fg3.jpg", title: "Pondok Penanti Kabut Laut", type: "Ocean", category: "ocean", desc: "Atap jerami sederhana diapit desau nyiur dan aroma garam laut, tempat bernaung dari hiruk-pikuk duniawi." },
-    { id: "ocean-14", img: "images/fotografi/ocean/fg4.jpg", title: "Kejernihan Kristal Lautan", type: "Ocean", category: "ocean", desc: "Air yang begitu bening hingga batuan dasar tampak menyapa, menyingkap keajaiban semesta bawah air." },
+    { id: "ocean-01", img: "images/fotografi/ocean/20240625_144456.webp", title: "Riak Abadi Pesisir Karang", type: "Ocean", category: "ocean", desc: "Hantaman air asin yang tak kenal lelah, mengukir ketabahan pada dinding karang purba yang berdiri kokoh." },
+    { id: "ocean-02", img: "images/fotografi/ocean/20240630_153618.webp", title: "Kedalaman Biru Samudra", type: "Ocean", category: "ocean", desc: "Warna biru yang menyimpan seribu kisah tak terucap, mengalir bebas mengikuti kehendak angin lepas." },
+    { id: "ocean-03", img: "images/fotografi/ocean/20240801_103307.webp", title: "Nyanyian Buih Putih", type: "Ocean", category: "ocean", desc: "Gelombang yang datang membawa sejuknya laut dalam, lalu bersujud lembut di atas hamparan pasir putih yang hangat." },
+    { id: "ocean-04", img: "images/fotografi/ocean/20250405_232104.webp", title: "Keheningan Arus Malam", type: "Ocean", category: "ocean", desc: "Bahkan samudra yang bergemuruh belajar untuk bernapas perlahan saat rembulan menjaga tidurnya." },
+    { id: "ocean-05", img: "images/fotografi/ocean/20251212_202653.webp", title: "Jejak Pasang di Tepi Waktu", type: "Ocean", category: "ocean", desc: "Garis pantai yang selalu berubah namun selalu ada, merefleksikan dinamika kehidupan yang terus mengalir." },
+    { id: "ocean-06", img: "images/fotografi/ocean/20260105_065940.webp", title: "Fajar Keemasan di Laut Lepas", type: "Ocean", category: "ocean", desc: "Kilau mentari pagi menyapa riak ombak pertama, melahirkan hari baru dengan kilau zamrud yang berkilauan." },
+    { id: "ocean-07", img: "images/fotografi/ocean/20260105_070955.webp", title: "Pecahan Gelombang Pagi", type: "Ocean", category: "ocean", desc: "Percikan air laut yang beterbangan bagai butiran intan, merayakan kebebasan di alam samudra nan megah." },
+    { id: "ocean-08", img: "images/fotografi/ocean/20260419_203908.webp", title: "Gradasi Pualam Pesisir", type: "Ocean", category: "ocean", desc: "Dari toska terang hingga biru gelap palung laut, simfoni warna air yang memanjakan setiap pasang mata." },
+    { id: "ocean-09", img: "images/fotografi/ocean/20260608_202441.webp", title: "Pelukan Tanjung Karang", type: "Ocean", category: "ocean", desc: "Daratan yang menjorok berani menantang luasnya lautan, sebuah benteng alam yang setia menjaga pesisir." },
+    { id: "ocean-10", img: "images/fotografi/ocean/f1.webp", title: "Sang Penjaga Batas Samudra", type: "Ocean", category: "ocean", desc: "Tebing karst terjal berdiri anggun, menahan deburan pasang dengan keteguhan yang tak tergoyahkan zaman." },
+    { id: "ocean-11", img: "images/fotografi/ocean/fg1.webp", title: "Gemuruh Ombak Berirama", type: "Ocean", category: "ocean", desc: "Gulungan air yang perkasa kembali pulang ke pelukan pantai, membawakan simfoni alam tertua di bumi." },
+    { id: "ocean-12", img: "images/fotografi/ocean/fg2.webp", title: "Cahaya Emas Tepian Air", type: "Ocean", category: "ocean", desc: "Refleksi kehangatan langit senja berpendar di atas basahnya pasir, menghadirkan kedamaian yang tak ternilai." },
+    { id: "ocean-13", img: "images/fotografi/ocean/fg3.webp", title: "Pondok Penanti Kabut Laut", type: "Ocean", category: "ocean", desc: "Atap jerami sederhana diapit desau nyiur dan aroma garam laut, tempat bernaung dari hiruk-pikuk duniawi." },
+    { id: "ocean-14", img: "images/fotografi/ocean/fg4.webp", title: "Kejernihan Kristal Lautan", type: "Ocean", category: "ocean", desc: "Air yang begitu bening hingga batuan dasar tampak menyapa, menyingkap keajaiban semesta bawah air." },
 
     // --- NATURE ---
-    { id: "nature-01", img: "images/fotografi/nature/20240626_120628.jpg", title: "Kidung Rimba Hijau", type: "Nature", category: "nature", desc: "Kesejukan dedaunan lebat yang menyaring terik siang, menghadirkan keteduhan surgawi di lantai rimba." },
-    { id: "nature-02", img: "images/fotografi/nature/20240724_204449.jpg", title: "Puspa Alam Tersembunyi", type: "Nature", category: "nature", desc: "Sebuah sudut sunyi di pelukan belantara, tempat napas kehidupan berdetak dalam harmoni sempurna." },
-    { id: "nature-03", img: "images/fotografi/nature/20240801_094145.jpg", title: "Embun Suci Pagi Hari", type: "Nature", category: "nature", desc: "Tetesan air bening menari di pucuk daun muda, menyambut mentari pagi dengan kesucian yang murni." },
-    { id: "nature-04", img: "images/fotografi/nature/20241003_200222.jpg", title: "Lembah Sunyi Berkabut", type: "Nature", category: "nature", desc: "Kabut tipis perlahan menuruni perbukitan, menyelubungi pepohonan dalam misteri dan kedamaian hening." },
-    { id: "nature-05", img: "images/fotografi/nature/20250402_230500.jpg", title: "Napas Hening Malam Hari", type: "Nature", category: "nature", desc: "Ketika fauna dan flora beristirahat di bawah naungan temaram, alam menyenandungkan ketenangan sejati." },
-    { id: "nature-06", img: "images/fotografi/nature/20260106_190810.jpg", title: "Garis Hayati Khatulistiwa", type: "Nature", category: "nature", desc: "Keanekaragaman bentuk dan rona hijau yang tumbuh subur, merayakan anugerah bumi nusantara." },
-    { id: "nature-07", img: "images/fotografi/nature/20260618_133724.jpg", title: "Panorama Lembah Tropis", type: "Nature", category: "nature", desc: "Hamparan bukit bergelombang yang menyegarkan jiwa, sejauh mata memandang hanya ada kedamaian." },
-    { id: "nature-08", img: "images/fotografi/nature/f3.jpg", title: "Nuansa Biru di Balik Pulau", type: "Nature", category: "nature", desc: "Gradasi pulau karang dan air laut jernih yang tenang, sebuah lukisan alam yang tak lekang oleh waktu." },
-    { id: "nature-09", img: "images/fotografi/nature/IMG_20240613_002909_817.jpg", title: "Cahaya di Sela Ranting", type: "Nature", category: "nature", desc: "Berkas sinar menembus celah dedaunan rimbun, melahirkan pendar keemasan yang menyejukkan batin." },
+    { id: "nature-01", img: "images/fotografi/nature/20240626_120628.webp", title: "Kidung Rimba Hijau", type: "Nature", category: "nature", desc: "Kesejukan dedaunan lebat yang menyaring terik siang, menghadirkan keteduhan surgawi di lantai rimba." },
+    { id: "nature-02", img: "images/fotografi/nature/20240724_204449.webp", title: "Puspa Alam Tersembunyi", type: "Nature", category: "nature", desc: "Sebuah sudut sunyi di pelukan belantara, tempat napas kehidupan berdetak dalam harmoni sempurna." },
+    { id: "nature-03", img: "images/fotografi/nature/20240801_094145.webp", title: "Embun Suci Pagi Hari", type: "Nature", category: "nature", desc: "Tetesan air bening menari di pucuk daun muda, menyambut mentari pagi dengan kesucian yang murni." },
+    { id: "nature-04", img: "images/fotografi/nature/20241003_200222.webp", title: "Lembah Sunyi Berkabut", type: "Nature", category: "nature", desc: "Kabut tipis perlahan menuruni perbukitan, menyelubungi pepohonan dalam misteri dan kedamaian hening." },
+    { id: "nature-05", img: "images/fotografi/nature/20250402_230500.webp", title: "Napas Hening Malam Hari", type: "Nature", category: "nature", desc: "Ketika fauna dan flora beristirahat di bawah naungan temaram, alam menyenandungkan ketenangan sejati." },
+    { id: "nature-06", img: "images/fotografi/nature/20260106_190810.webp", title: "Garis Hayati Khatulistiwa", type: "Nature", category: "nature", desc: "Keanekaragaman bentuk dan rona hijau yang tumbuh subur, merayakan anugerah bumi nusantara." },
+    { id: "nature-07", img: "images/fotografi/nature/20260618_133724.webp", title: "Panorama Lembah Tropis", type: "Nature", category: "nature", desc: "Hamparan bukit bergelombang yang menyegarkan jiwa, sejauh mata memandang hanya ada kedamaian." },
+    { id: "nature-08", img: "images/fotografi/nature/f3.webp", title: "Nuansa Biru di Balik Pulau", type: "Nature", category: "nature", desc: "Gradasi pulau karang dan air laut jernih yang tenang, sebuah lukisan alam yang tak lekang oleh waktu." },
+    { id: "nature-09", img: "images/fotografi/nature/IMG_20240613_002909_817.webp", title: "Cahaya di Sela Ranting", type: "Nature", category: "nature", desc: "Berkas sinar menembus celah dedaunan rimbun, melahirkan pendar keemasan yang menyejukkan batin." },
 
     // --- FRAGMENTS ---
-    { id: "fragments-01", img: "images/fotografi/fragments/20240630_155952.jpg", title: "Serpihan Waktu yang Tersimpan", type: "Fragments", category: "fragments", desc: "Detail mikro dari elemen alam yang merekam perjalanan waktu; setiap guratan menyimpan kisah jutaan detik." },
-    { id: "fragments-02", img: "images/fotografi/fragments/20240705_165915.jpg", title: "Pecahan Memori Spasial", type: "Fragments", category: "fragments", desc: "Potongan tekstur yang terabaikan oleh langkah tergesa, menuntut mata yang peka untuk menemukan keindahannya." },
+    { id: "fragments-01", img: "images/fotografi/fragments/20240630_155952.webp", title: "Serpihan Waktu yang Tersimpan", type: "Fragments", category: "fragments", desc: "Detail mikro dari elemen alam yang merekam perjalanan waktu; setiap guratan menyimpan kisah jutaan detik." },
+    { id: "fragments-02", img: "images/fotografi/fragments/20240705_165915.webp", title: "Pecahan Memori Spasial", type: "Fragments", category: "fragments", desc: "Potongan tekstur yang terabaikan oleh langkah tergesa, menuntut mata yang peka untuk menemukan keindahannya." },
 
     // --- ARCHITECTURE ---
-    { id: "architecture-01", img: "images/fotografi/architecture/20240514_135531.jpg", title: "Geometri Ruang Urban", type: "Architecture", category: "architecture", desc: "Pertemuan garis tegas dan sudut presisi, merangkai dialog visual antara material beton dan langit terbuka." },
-    { id: "architecture-02", img: "images/fotografi/architecture/20240622_185724.jpg", title: "Simfoni Baja dan Beton", type: "Architecture", category: "architecture", desc: "Struktur kokoh buatan manusia yang menjulang megah, saksi bisu denyut dinamika kota yang tak pernah tidur." },
-    { id: "architecture-03", img: "images/fotografi/architecture/20240622_190103.jpg", title: "Irama Garis dan Bayangan", type: "Architecture", category: "architecture", desc: "Bukaan jendela dan bidang fasad bermain dengan jatuhnya bayang-bayang, menciptakan komposisi simetris yang memukau." },
-    { id: "architecture-04", img: "images/fotografi/architecture/20240702_190726.jpg", title: "Monumen Penjelajah Kota", type: "Architecture", category: "architecture", desc: "Perspektif unik yang menyingkap keanggunan bentuk struktural dari sudut yang tak terduga." },
-    { id: "architecture-05", img: "images/fotografi/architecture/20241029_190947.jpg", title: "Refleksi Fasad Modern", type: "Architecture", category: "architecture", desc: "Permukaan kaca dan bidang dinding merespons cahaya malam, menegaskan identitas arsitektur perkotaan kontemporer." },
-    { id: "architecture-06", img: "images/fotografi/architecture/20250816_141345.jpg", title: "Ruang Bernapas di Tengah Kota", type: "Architecture", category: "architecture", desc: "Tata ruang yang mempertemukan fungsionalitas dan kenyamanan, tempat manusia dan struktur saling berinteraksi." },
-    { id: "architecture-07", img: "images/fotografi/architecture/20260307_024504.jpg", title: "Puncak Menara Sunyi", type: "Architecture", category: "architecture", desc: "Elevasi arsitektural yang menembus keheningan dini hari, kokoh menatap horizon kota." },
-    { id: "architecture-08", img: "images/fotografi/architecture/20260613_223115.jpg", title: "Siluet Peradaban Malam", type: "Architecture", category: "architecture", desc: "Ketika lampu-lampu kota mulai menyala, garis arsitektur menjelma siluet puitis yang membelah kegelapan." }
+    { id: "architecture-01", img: "images/fotografi/architecture/20240514_135531.webp", title: "Geometri Ruang Urban", type: "Architecture", category: "architecture", desc: "Pertemuan garis tegas dan sudut presisi, merangkai dialog visual antara material beton dan langit terbuka." },
+    { id: "architecture-02", img: "images/fotografi/architecture/20240622_185724.webp", title: "Simfoni Baja dan Beton", type: "Architecture", category: "architecture", desc: "Struktur kokoh buatan manusia yang menjulang megah, saksi bisu denyut dinamika kota yang tak pernah tidur." },
+    { id: "architecture-03", img: "images/fotografi/architecture/20240622_190103.webp", title: "Irama Garis dan Bayangan", type: "Architecture", category: "architecture", desc: "Bukaan jendela dan bidang fasad bermain dengan jatuhnya bayang-bayang, menciptakan komposisi simetris yang memukau." },
+    { id: "architecture-04", img: "images/fotografi/architecture/20240702_190726.webp", title: "Monumen Penjelajah Kota", type: "Architecture", category: "architecture", desc: "Perspektif unik yang menyingkap keanggunan bentuk struktural dari sudut yang tak terduga." },
+    { id: "architecture-05", img: "images/fotografi/architecture/20241029_190947.webp", title: "Refleksi Fasad Modern", type: "Architecture", category: "architecture", desc: "Permukaan kaca dan bidang dinding merespons cahaya malam, menegaskan identitas arsitektur perkotaan kontemporer." },
+    { id: "architecture-06", img: "images/fotografi/architecture/20250816_141345.webp", title: "Ruang Bernapas di Tengah Kota", type: "Architecture", category: "architecture", desc: "Tata ruang yang mempertemukan fungsionalitas dan kenyamanan, tempat manusia dan struktur saling berinteraksi." },
+    { id: "architecture-07", img: "images/fotografi/architecture/20260307_024504.webp", title: "Puncak Menara Sunyi", type: "Architecture", category: "architecture", desc: "Elevasi arsitektural yang menembus keheningan dini hari, kokoh menatap horizon kota." },
+    { id: "architecture-08", img: "images/fotografi/architecture/20260613_223115.webp", title: "Siluet Peradaban Malam", type: "Architecture", category: "architecture", desc: "Ketika lampu-lampu kota mulai menyala, garis arsitektur menjelma siluet puitis yang membelah kegelapan." }
   ];
 
   const photoGalleryModal = document.getElementById("photo-gallery-modal");

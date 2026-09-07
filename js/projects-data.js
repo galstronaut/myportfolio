@@ -7,7 +7,7 @@ const projectsData = [
     id: "gis-1",
     category: "gis",
     date: "Agustus 2025",
-    heroImg: "images/gis/tsunami/profil.jpg",
+    heroImg: "images/gis/tsunami/profil.webp",
     tools: ["ArcGIS Pro", "DEMNAS", "QGIS", "Cost Distance"],
     titles: {
       id: "Pemodelan Inundasi & Mitigasi Tsunami Pangandaran",
@@ -49,7 +49,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/gis/tsunami/inundasi.jpg",
+        img: "images/gis/tsunami/inundasi.webp",
         titles: {
           id: "Pemodelan Inundasi Tsunami",
           en: "Tsunami Inundation Modeling",
@@ -66,7 +66,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/gis/tsunami/klalsifikasi.jpg",
+        img: "images/gis/tsunami/klalsifikasi.webp",
         titles: {
           id: "Klasifikasi Kerawanan Tsunami",
           en: "Tsunami Hazard Classification",
@@ -83,7 +83,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/gis/tsunami/amatan.jpg",
+        img: "images/gis/tsunami/amatan.webp",
         titles: {
           id: "amatan",
           en: "amatan",
@@ -100,7 +100,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/gis/tsunami/hasil.png",
+        img: "images/gis/tsunami/hasil.webp",
         titles: {
           id: "Hasil Perhitungan Tingkat Kerawanan",
           en: "Hazard Level Calculation Results",
@@ -122,7 +122,7 @@ const projectsData = [
     id: "gis-2",
     category: "gis",
     date: "Sep - Okt 2025",
-    heroImg: "images/gis/znt/profil.png",
+    heroImg: "images/gis/znt/profil.webp",
     tools: ["ArcGIS", "Avenza Maps", "GPS Garmin", "Geodatabase"],
     titles: {
       id: "Survei & Pemetaan Zona Nilai Tanah (ZNT) NTT",
@@ -164,7 +164,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/gis/znt/zona.png",
+        img: "images/gis/znt/zona.webp",
         titles: {
           id: "Pemetaan Awal Zona Nilai Tanah (ZNT) Kabupaten Timor Tengah Selatan Provinsi NTT",
           en: "Land Value Zone (ZNT) East Nusa Tenggara",
@@ -181,7 +181,7 @@ const projectsData = [
         }
         },
       {
-        img: "images/gis/znt/d2.jpg",
+        img: "images/gis/znt/d2.webp",
         titles: {
           id: "Koordinasi Setiap Kantor Desa",
           en: "Parcel Verification & Surveyor Team Collaboration",
@@ -198,7 +198,7 @@ const projectsData = [
         }
          },
       {
-        img: "images/gis/znt/d1.jpg",
+        img: "images/gis/znt/d1.webp",
         titles: {
           id: "Survei Lapangan & Pengukuran Titik Batas",
           en: "Field Boundary Survey & Coordinate Measurement",
@@ -215,7 +215,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/gis/znt/data.png",
+        img: "images/gis/znt/data.webp",
         titles: {
           id: "Plotting Titik Sampel ZNT",
           en: "Cadastral Boundary & Base Data Plotting",
@@ -237,7 +237,7 @@ const projectsData = [
     id: "gis-3",
     category: "gis",
     date: "Juli - Des 2024",
-    heroImg: "images/gis/komoditas/profil.png",
+    heroImg: "images/gis/komoditas/profil.webp",
     tools: ["ArcGIS", "QGIS", "Landsat 8", "Google Earth Pro"],
     titles: {
       id: "Updating Tutupan Lahan & Komoditas Unggulan",
@@ -279,7 +279,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/gis/komoditas/komoditasxtuplah.jpg",
+        img: "images/gis/komoditas/komoditasxtuplah.webp",
         titles: {
           id: "Updating Tutupan Lahan dan Komoditas Unggulan",
           en: "Regional Scale Land Cover Updating",
@@ -296,7 +296,7 @@ const projectsData = [
         }
           },
       {
-        img: "images/gis/komoditas/tuplah.jpg",
+        img: "images/gis/komoditas/tuplah.webp",
         titles: {
           id: "Pemetaan Sebaran Tutupan Lahan",
           en: "Satellite Imagery & Land Cover Delineation",
@@ -313,7 +313,7 @@ const projectsData = [
         }
       },
          {
-        img: "images/gis/komoditas/tuplahdata.png",
+        img: "images/gis/komoditas/tuplahdata.webp",
         titles: {
           id: "Jumlah Tutupan Lahan",
           en: "Satellite Imagery & Land Cover Delineation",
@@ -330,7 +330,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/gis/komoditas/komoditas.jpg",
+        img: "images/gis/komoditas/komoditas.webp",
         titles: {
           id: "Pemetaan Sebaran Komoditas Unggulan",
           en: "Plantation & Commodity Vector Mapping",
@@ -347,7 +347,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/gis/komoditas/komoditasdata.png",
+        img: "images/gis/komoditas/komoditasdata.webp",
         titles: {
           id: "Jumlah Komoditas Unggulan",
           en: "Spatial Database Architecture & Tabular Summary",
@@ -369,7 +369,7 @@ const projectsData = [
     id: "design-1",
     category: "design",
     date: "2024 - 2026",
-    heroImg: "images/design/profil2.jpg",
+    heroImg: "images/design/profil2.webp",
     tools: ["Adobe Illustrator", "Photoshop", "CorelDraw", "Figma"],
     titles: {
       id: "Morvethic",
@@ -394,7 +394,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/design/morvethic/morvethic.jpg",
+        img: "images/design/morvethic/morvethic.webp",
         titles: {
           id: "Morvethic — Brand Identity System",
           en: "Morvethic Brand Identity System",
@@ -411,7 +411,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/design/morvethic/mockup.png",
+        img: "images/design/morvethic/mockup.webp",
         titles: {
           id: "Morvethic — Mockup Application",
           en: "Product Mockup",
@@ -428,7 +428,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/design/morvethic/mvt.png",
+        img: "images/design/morvethic/mvt.webp",
         titles: {
           id: "Morvethic — Primary Logo Mark",
           en: "Typography & Logo Geometry Exploration",
@@ -450,7 +450,7 @@ const projectsData = [
     id: "design-2",
     category: "design",
     date: "2024 - 2026",
-    heroImg: "images/design/galfik/profil.png",
+    heroImg: "images/design/galfik/profil.webp",
     tools: ["Adobe Illustrator", "Photoshop", "Figma", "CorelDraw"],
     titles: {
       id: "Galfiks Accessories",
@@ -475,7 +475,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/design/galfik/profil.png",
+        img: "images/design/galfik/profil.webp",
         titles: {
           id: "Mockup Toko & Signage Eksterior",
           en: "Storefront Mockup & Exterior Signage",
@@ -492,7 +492,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/design/galfik/gk2.png",
+        img: "images/design/galfik/gk2.webp",
         titles: {
           id: "Poster",
           en: "Brand Guidelines, Typography & Patterns",
@@ -509,7 +509,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/design/galfik/gk3.jpg",
+        img: "images/design/galfik/gk3.webp",
         titles: {
           id: "Logo Galfiks — Kupu-Kupu, Bulan & Gelombang",
           en: "Primary Logomark & Monogram",
@@ -531,7 +531,7 @@ const projectsData = [
     id: "photo-1",
     category: "photo",
     date: "2024 - 2026",
-    heroImg: "images/fotografi/profil.jpg",
+    heroImg: "images/fotografi/profil.webp",
     tools: ["Sony Alpha", "Lightroom Classic", "DJI Drone", "CPL Filter"],
     titles: {
       id: "Through My Lens & A World in Frames",
@@ -556,7 +556,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/fotografi/ocean/f1.jpg",
+        img: "images/fotografi/ocean/f1.webp",
         titles: {
           id: "Coastal Karst Cliffs & Ocean Topography",
           en: "Coastal Karst Cliffs & Ocean Topography",
@@ -578,7 +578,7 @@ const projectsData = [
     id: "video-1",
     category: "video",
     date: "2025",
-    heroImg: "images/photo/Evenement Y3_octobre 2025.jpg",
+    heroImg: "images/photo/Evenement Y3_octobre 2025.webp",
     tools: ["Premiere Pro", "CapCut", "Sony Alpha", "Color Grading"],
     titles: {
       id: "Dokumentasi Video & Cerita Visual",
@@ -594,7 +594,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/photo/Evenement Y3_octobre 2025.jpg",
+        img: "images/photo/Evenement Y3_octobre 2025.webp",
         titles: {
           id: "Video Dokumentasi Kreatif",
           en: "Creative Video Documentation"
@@ -610,7 +610,7 @@ const projectsData = [
     id: "outfit-1",
     category: "outfit",
     date: "2025 - 2026",
-    heroImg: "images/outfit/model2.png",
+    heroImg: "images/outfit/model2.webp",
     tools: ["Adobe Illustrator", "Photoshop", "Clo3D", "Tech Pack"],
     titles: {
       id: "Morvethic Apparel Collection",
@@ -626,7 +626,7 @@ const projectsData = [
     },
     slides: [
       {
-        img: "images/outfit/model2.png",
+        img: "images/outfit/model2.webp",
         titles: {
           id: "Morvethic Apparel",
           en: "Morvethic Apparel Concept"
@@ -637,7 +637,7 @@ const projectsData = [
         }
       },
       {
-        img: "images/outfit/model3.png",
+        img: "images/outfit/model3.webp",
         titles: {
           id: "Morvethic Apparel",
           en: "Collection Visual Direction"
@@ -677,8 +677,8 @@ const certsData = [
       ru: "Городское и региональное планирование"
     },
     images: [
-      "images/sertifikat/pwk/Galih_5201511004_page-0001.jpg",
-      "images/sertifikat/pwk/5201511004-galih_page-0001.jpg"
+      "images/sertifikat/pwk/Galih_5201511004_page-0001.webp",
+      "images/sertifikat/pwk/5201511004-galih_page-0001.webp"
     ],
     items: [
       {
@@ -686,7 +686,7 @@ const certsData = [
         icon: "fa-solid fa-database",
         title: "Data Engineering Professional Certification",
         issuer: "RapidMiner (Altair Company)",
-        img: "images/sertifikat/pwk/Galih_5201511004_page-0001.jpg",
+        img: "images/sertifikat/pwk/Galih_5201511004_page-0001.webp",
         status: "Kredensial Resmi / Terverifikasi",
         descs: {
           id: "Sertifikasi kompetensi profesional resmi dari RapidMiner (Altair) dalam bidang Data Engineering. Menguji keahlian pengolahan data, ekstraksi, integrasi multi-dataset tabular dan spasial, penyusunan pivot table, serta pembersihan data untuk persiapan pemodelan geospasial dan analisis perencanaan wilayah.",
@@ -698,7 +698,7 @@ const certsData = [
         icon: "fa-solid fa-brain",
         title: "Machine Learning Professional Certification",
         issuer: "RapidMiner (Altair Company)",
-        img: "images/sertifikat/pwk/5201511004-galih_page-0001.jpg",
+        img: "images/sertifikat/pwk/5201511004-galih_page-0001.webp",
         status: "Kredensial Resmi / Terverifikasi",
         descs: {
           id: "Sertifikasi kompetensi profesional tingkat lanjut dari RapidMiner (Altair) dalam bidang Machine Learning. Menguji keahlian implementasi algoritma prediktif, klasifikasi, regresi, scoring model, validasi data hold-out, korelasi fitur penting, serta clustering spasial untuk mendukung perencanaan wilayah berbasis sains data.",
@@ -746,13 +746,13 @@ const collaborationsData = [
   {
     id: "collab-geotama",
     name: "PT. Mitra Geotama Indonesia",
-    logo: "images/perusahaan/mgi.png",
+    logo: "images/perusahaan/mgi.webp",
     mapUrl: "https://maps.google.com/?q=PT+Mitra+Geotama+Indonesia+Yogyakarta",
     location: "D.I. Yogyakarta, Indonesia",
     documentation: [
-      { img: "images/perusahaan/pengalaman/mgi/dokumentasi1.jpg", caption: "Dokumentasi kerja tim spasial PT. Mitra Geotama Indonesia." },
-      { img: "images/perusahaan/pengalaman/mgi/kerjapraktik-1.jpg", caption: "Sertifikat Kerja Praktik PT. Mitra Geotama Indonesia (Juli–September 2024)." },
-      { img: "images/perusahaan/pengalaman/mgi/magang-1.jpg", caption: "Sertifikat Magang Mandiri PT. Mitra Geotama Indonesia (Oktober–Desember 2024)." }
+      { img: "images/perusahaan/pengalaman/mgi/dokumentasi1.webp", caption: "Dokumentasi kerja tim spasial PT. Mitra Geotama Indonesia." },
+      { img: "images/perusahaan/pengalaman/mgi/kerjapraktik-1.webp", caption: "Sertifikat Kerja Praktik PT. Mitra Geotama Indonesia (Juli–September 2024)." },
+      { img: "images/perusahaan/pengalaman/mgi/magang-1.webp", caption: "Sertifikat Magang Mandiri PT. Mitra Geotama Indonesia (Oktober–Desember 2024)." }
     ],
     period: "Juli 2024 - Des 2024",
     tags: {
@@ -780,13 +780,13 @@ const collaborationsData = [
   {
     id: "collab-kso",
     name: "KJSB Muchamad Masykur dan Rekan (KSO)",
-    logo: "images/perusahaan/kso.png",
+    logo: "images/perusahaan/kso.webp",
     mapUrl: "https://maps.google.com/?q=Kementerian+Agraria+dan+Tata+Ruang+Badan+Pertanahan+Nasional+Jakarta",
     location: "Nusa Tenggara Timur, Indonesia",
     documentation: [
-      { img: "images/perusahaan/pengalaman/kso/d1.jpg", caption: "Survei lapangan dan plotting titik koordinat ZNT NTT." },
-      { img: "images/perusahaan/pengalaman/kso/d2.jpg", caption: "Koordinasi teknis tim surveyor pemetaan Zona Nilai Tanah." },
-      { img: "images/perusahaan/pengalaman/kso/d3.jpg", caption: "Verifikasi lapangan bersama tim ATR/BPN & KJSB Muchamad Masykur." }
+      { img: "images/perusahaan/pengalaman/kso/d1.webp", caption: "Survei lapangan dan plotting titik koordinat ZNT NTT." },
+      { img: "images/perusahaan/pengalaman/kso/d2.webp", caption: "Koordinasi teknis tim surveyor pemetaan Zona Nilai Tanah." },
+      { img: "images/perusahaan/pengalaman/kso/d3.webp", caption: "Verifikasi lapangan bersama tim ATR/BPN & KJSB Muchamad Masykur." }
     ],
     period: "Sep 2025 - Okt 2025",
     tags: {
@@ -814,13 +814,13 @@ const collaborationsData = [
   {
     id: "collab-uty",
     name: "Universitas Teknologi Yogyakarta",
-    logo: "images/perusahaan/uty.png",
+    logo: "images/perusahaan/uty.webp",
     mapUrl: "https://maps.google.com/?q=Universitas+Teknologi+Yogyakarta+Kampus+1",
     location: "Sleman, D.I. Yogyakarta",
     documentation: [
-      { img: "images/perusahaan/pengalaman/uty/d1.png", caption: "Dokumentasi riset akademik dan analisis spasial PWK UTY." },
-      { img: "images/perusahaan/pengalaman/uty/d2.png", caption: "Sidang tugas akhir dan presentasi hasil pemodelan geospasial." },
-      { img: "images/perusahaan/pengalaman/uty/d3.png", caption: "Dokumentasi kelulusan Sarjana Perencanaan Wilayah & Kota UTY." }
+      { img: "images/perusahaan/pengalaman/uty/d1.webp", caption: "Dokumentasi riset akademik dan analisis spasial PWK UTY." },
+      { img: "images/perusahaan/pengalaman/uty/d2.webp", caption: "Sidang tugas akhir dan presentasi hasil pemodelan geospasial." },
+      { img: "images/perusahaan/pengalaman/uty/d3.webp", caption: "Dokumentasi kelulusan Sarjana Perencanaan Wilayah & Kota UTY." }
     ],
     period: "2020 - 2025",
     tags: {
