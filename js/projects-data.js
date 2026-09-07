@@ -85,18 +85,18 @@ const projectsData = [
       {
         img: "images/gis/tsunami/amatan.webp",
         titles: {
-          id: "Peta Sebaran Indeks Kerawanan Tsunami",
-          en: "amatan",
-          ja: "amatan",
-          ko: "amatan",
-          ru: "amatan"
+          id: "Peta Hasil Inundasi Kerawanan Tsunami",
+          en: "Tsunami Inundation Hazard Map",
+          ja: "津波浸水・脆弱性マップ",
+          ko: "쓰나미 침수 위험 지도",
+          ru: "Карта опасности затопления цунами"
         },
         descs: {
-          id: "Peta ini memperlihatkan sebaran indeks kerawanan tsunami di Kecamatan Pangandaran melalui gradasi warna. Area merah menunjukkan nilai kerawanan tertinggi, lalu berangsur ke kuning dan hijau pada area yang lebih rendah. Batas desa dan kecamatan membantu membaca persebaran risikonya.",
-          en: "Observed tsunami hazard map displaying the continuous vulnerability index based on the map legend: High at 1 (red) to Low at 0.271812 (green), alongside village and district boundaries.",
-          ja: "地図凡例に基づく津波災害脆弱性観測マップ：High（1、赤）からLow（0.271812、緑）までの連続インデックス分布、および村・地区の行政境界を表示。",
-          ko: "지도 범례에 따른 쓰나미 관측 취약성 지도: High 1(빨간색)부터 Low 0.271812(녹색)까지의 연속 위험 지수 분포 및 마을·지역 경계 표시.",
-          ru: "Карта наблюдаемой опасности цунами с непрерывным градиентом индекса по легенде: от High: 1 (красный) до Low: 0,271812 (зеленый), с границами деревень и районов."
+          id: "Visualisasi tingkat kerawanan bencana tsunami berbasis pemodelan inundasi. Memetakan sebaran indeks risiko dari tingkat tinggi bernilai 1 hingga rendah bernilai 0,271812.",
+          en: "Visualization of tsunami hazard levels based on inundation modeling. It maps the distribution of risk indices, ranging from a high level (value of 1) to a low level (value of 0.271812).",
+          ja: "浸水シミュレーションに基づく津波災害リスクの可視化。リスク指数の分布を、高リスク（値：1）から低リスク（値：0.271812）の範囲でマッピングしています。",
+          ko: "침수 모델링에 기반한 쓰나미 위험도 시각화입니다. 이는 높은 수준(값 1)에서 낮은 수준(값 0.271812)에 이르는 위험 지수 분포를 지도상에 나타냅니다.",
+          ru: "Визуализация уровней цунамиопасности на основе моделирования затопления. На карте представлено распределение индексов риска: от высокого уровня (значение 1) до низкого (значение 0,271812)."
         }
       },
       {
@@ -109,11 +109,11 @@ const projectsData = [
           ru: "Результаты расчетов по уровням опасности"
         },
         descs: {
-          id: "Hasil perhitungan luas area tiap tingkat kerawanan tsunami: Rendah seluas 404,91 Ha (18%), Sedang seluas 405,47 Ha (18%), dan Tinggi seluas 1.391,88 Ha (63%) dari total area kajian 2.202,26 Ha (100%). Area paling berisiko tinggi mencakup lokasi permukiman warga dan pusat kegiatan wisata.",
-          en: "Calculation results of area per tsunami hazard level: Low covers 404.91 ha (18%), Moderate covers 405.47 ha (18%), and High covers 1,391.88 ha (63%) out of a total study area of 2,202.26 ha (100%). The highest risk zone predominantly impacts settlements and coastal tourism.",
-          ja: "津波危険度レベル別の面積計算結果：低 404.91 ha（18%）、中 405.47 ha（18%）、高 1,391.88 ha（63%）、調査総面積 2,202.26 ha（100%）。最もリスクの高いエリアは住宅地および観光活動の中心地に集中しています。",
-          ko: "쓰나미 위험 등급별 면적 계산 결과 요약: 낮음 404.91ha(18%), 보통 405.47ha(18%), 높음 1,391.88ha(63%), 총 2,202.26ha(100%). 고위험 구역은 주로 거주 지역 및 해안 관광 중심지에 집중되어 있습니다.",
-          ru: "Краткие результаты расчетов площади по уровням опасности цунами: Низкий — 404,91 га (18%), Средний — 405,47 га (18%), Высокий — 1 391,88 га (63%) из общей площади 2 202,26 га (100%). Наиболее опасная зона охватывает жилые кварталы и туристические центры."
+          id: "Hasil analisis tingkat kerawanan tsunami untuk area kajian seluas 2.202,26 Ha. Sebaran risiko didominasi oleh zona kerawanan Tinggi sebesar 63% (1.391,88 Ha), sementara zona Rendah dan Sedang masing-masing 18%. Pada area berisiko tinggi, tutupan lahan yang paling terdampak mencakup permukiman (28%), perkebunan (27,8%), dan sawah (16,5%) sebagai acuan penyusunan arahan mitigasi bencana pesisir.",
+          en: "Analysis of tsunami vulnerability levels across the 2,202.26-hectare study area reveals that the risk distribution is dominated by a high-vulnerability zone, accounting for 63% (1,391.88 ha) of the area, while low- and moderate-vulnerability zones each comprise 18%. Within the high-risk zone, the land cover types most affected include settlements (28%), plantations (27.8%), and rice fields (16.5%); these findings serve as a basis for formulating coastal disaster mitigation guidelines.",
+          ja: "調査対象地域（総面積2,202.26ヘクタール）における津波脆弱性分析の結果、リスクの分布を見ると、脆弱性が「高い」ゾーンが全体の63%（1,391.88ヘクタール）を占め、一方で「低い」ゾーンと「中程度」のゾーンはそれぞれ18%を占めていることが明らかになりました。リスクの高い地域において最も大きな影響を受ける土地利用区分は、居住地（28%）、プランテーション（27.8%）、水田（16.5%）であり、これらのデータは、沿岸地域における防災・減災対策を策定する上で重要な指標となります。",
+          ko: "연구 대상 지역(2,202.26헥타르)에 대한 쓰나미 취약성 분석 결과, 위험도 분포를 살펴보면 전체 면적의 63%(1,391.88헥타르)가 '높음' 단계의 취약성 구역에 해당하며, '낮음' 및 '보통' 단계 구역은 각각 18%를 차지하는 것으로 나타났습니다. 고위험 구역 내에서 가장 큰 영향을 받는 토지 이용 유형은 주거지(28%), 플랜테이션(27.8%), 논(16.5%) 순이었으며, 이러한 데이터는 해안 지역의 재난 예방 및 피해 경감 대책을 수립하는 데 있어 핵심적인 지표로 활용됩니다.",
+          ru: "Анализ уязвимости исследуемой территории (площадью 2202,26 га) к цунами показывает, что зона высокой уязвимости охватывает 63% (1391,88 га) всей площади, тогда как на зоны низкой и умеренной уязвимости приходится по 18%. В пределах зоны высокого риска наиболее затронутыми категориями землепользования являются населенные пункты (28%), плантации (27,8%) и рисовые поля (16,5%); эти данные служат ключевыми показателями для разработки мер по предотвращению стихийных бедствий и снижению их последствий в прибрежных районах."
         }
       }
     ]
