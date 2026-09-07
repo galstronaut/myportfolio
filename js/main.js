@@ -100,16 +100,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const accentNode = rotator.querySelector(".animate-word-accent");
       if (!mainNode || !accentNode) return;
 
-      const mainWords = JSON.parse(rotator.dataset.wordCycle || "[]");
-      const accentWords = JSON.parse(rotator.dataset.wordAccent || "[]");
-      if (!mainWords.length || !accentWords.length) return;
+      const cycleKey = rotator.dataset.wordI18n;
+      const getWords = () => {
+        const translated = sectionWordCycles[currentLang]?.[cycleKey] || sectionWordCycles.id?.[cycleKey];
+        return translated || {
+          main: JSON.parse(rotator.dataset.wordCycle || "[]"),
+          accent: JSON.parse(rotator.dataset.wordAccent || "[]")
+        };
+      };
+      if (!getWords().main.length || !getWords().accent.length) return;
 
       let index = 0;
       let timerId = null;
 
       const animateWord = () => {
-        mainNode.textContent = mainWords[index];
-        accentNode.textContent = accentWords[index];
+        const words = getWords();
+        mainNode.textContent = words.main[index % words.main.length];
+        accentNode.textContent = words.accent[index % words.accent.length];
 
         mainNode.classList.remove("is-visible", "is-animating");
         accentNode.classList.remove("is-visible", "is-animating");
@@ -124,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         timerId = window.setTimeout(() => {
           mainNode.classList.remove("is-visible", "is-animating");
           accentNode.classList.remove("is-visible", "is-animating");
-          index = (index + 1) % mainWords.length;
+          index = (index + 1) % words.main.length;
           window.setTimeout(animateWord, 180);
         }, 5000);
       };
@@ -249,6 +256,15 @@ document.addEventListener("DOMContentLoaded", () => {
           el.innerHTML = t[key];
         }
       }
+    });
+
+    document.querySelectorAll(".word-rotator[data-word-i18n]").forEach((rotator) => {
+      const words = sectionWordCycles[lang]?.[rotator.dataset.wordI18n] || sectionWordCycles.id?.[rotator.dataset.wordI18n];
+      if (!words) return;
+      const mainNode = rotator.querySelector(".animate-word-main");
+      const accentNode = rotator.querySelector(".animate-word-accent");
+      if (mainNode) mainNode.textContent = words.main[0];
+      if (accentNode) accentNode.textContent = words.accent[0];
     });
 
     // Update titles and partner tags that are generated from portfolio data.

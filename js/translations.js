@@ -497,6 +497,59 @@ const i18nData = {
   }
 };
 
+const interfaceTranslations = {
+  id: {
+    navSpatial: "Karya Spasial", navDesign: "Studio Desain",
+    spatialSubtitle: "Analisis geospasial untuk memahami wilayah, mengenali pola, dan menghasilkan keputusan perencanaan yang bermakna.",
+    gisHeading: "GIS <span class=\"amp\">&</span> <em>Analisis Spasial</em>", gisDescription: "Pemetaan tematik, analisis keruangan, dan pengolahan data geospasial.",
+    designCopy: "Identitas merek, visual kampanye, hingga apparel dirancang agar setiap karya punya karakter yang mudah dikenali dan terasa dekat.",
+    visualHeading: "Grafis <span class=\"amp\">&</span> <em>Kreatif</em>", visualDescription: "Identitas merek, desain poster, apparel teknis, web design, dan media visual.",
+    filterAllVisual: "Semua", filterDesignVisual: "Desain Grafis", filterPhotoVisual: "Fotografi", filterOutfitVisual: "Desain Baju"
+  },
+  en: {
+    navSpatial: "Spatial Work", navDesign: "Design Studio",
+    spatialSubtitle: "Geospatial analysis for understanding places, identifying patterns, and supporting meaningful planning decisions.",
+    gisHeading: "GIS <span class=\"amp\">&</span> <em>Spatial Analysis</em>", gisDescription: "Thematic mapping, spatial analysis, and geospatial data processing.",
+    designCopy: "From brand identity and campaign visuals to apparel, each piece is shaped to feel distinctive, recognisable, and close to its audience.",
+    visualHeading: "Graphic <span class=\"amp\">&</span> <em>Creative</em>", visualDescription: "Brand identity, poster design, technical apparel, web design, and visual media.",
+    filterAllVisual: "All", filterDesignVisual: "Graphic Design", filterPhotoVisual: "Photography", filterOutfitVisual: "Apparel Design"
+  },
+  ja: {
+    navSpatial: "空間プロジェクト", navDesign: "デザインスタジオ",
+    spatialSubtitle: "地域を読み解き、パターンを捉え、計画に生かすための地理空間分析。",
+    gisHeading: "GIS <span class=\"amp\">&</span> <em>空間分析</em>", gisDescription: "主題図作成、空間分析、地理空間データ処理。",
+    designCopy: "ブランドアイデンティティ、キャンペーンビジュアル、アパレルまで、一つひとつの作品に覚えやすく親しみのある個性を与えます。",
+    visualHeading: "グラフィック <span class=\"amp\">&</span> <em>クリエイティブ</em>", visualDescription: "ブランドアイデンティティ、ポスターデザイン、テクニカルアパレル、Webデザイン、ビジュアルメディア。",
+    filterAllVisual: "すべて", filterDesignVisual: "グラフィックデザイン", filterPhotoVisual: "写真", filterOutfitVisual: "アパレルデザイン"
+  },
+  ko: {
+    navSpatial: "공간 프로젝트", navDesign: "디자인 스튜디오",
+    spatialSubtitle: "지역을 이해하고 패턴을 발견하여 의미 있는 계획 결정을 돕는 지리공간 분석입니다.",
+    gisHeading: "GIS <span class=\"amp\">&</span> <em>공간 분석</em>", gisDescription: "주제도 제작, 공간 분석, 지리공간 데이터 처리.",
+    designCopy: "브랜드 아이덴티티와 캠페인 비주얼부터 의류까지, 모든 작업에 쉽게 기억되고 친근하게 느껴지는 개성을 담습니다.",
+    visualHeading: "그래픽 <span class=\"amp\">&</span> <em>크리에이티브</em>", visualDescription: "브랜드 아이덴티티, 포스터 디자인, 테크니컬 의류, 웹 디자인, 비주얼 미디어.",
+    filterAllVisual: "전체", filterDesignVisual: "그래픽 디자인", filterPhotoVisual: "사진", filterOutfitVisual: "의류 디자인"
+  },
+  ru: {
+    navSpatial: "Пространственные работы", navDesign: "Студия дизайна",
+    spatialSubtitle: "Геопространственный анализ помогает понимать территории, видеть закономерности и принимать обоснованные планировочные решения.",
+    gisHeading: "ГИС <span class=\"amp\">&</span> <em>Пространственный анализ</em>", gisDescription: "Тематическое картографирование, пространственный анализ и обработка геоданных.",
+    designCopy: "От айдентики бренда и кампаний до одежды — каждая работа создаётся с узнаваемым характером и близким людям образом.",
+    visualHeading: "Графика <span class=\"amp\">&</span> <em>Креатив</em>", visualDescription: "Айдентика бренда, дизайн плакатов, техническая одежда, веб-дизайн и визуальные медиа.",
+    filterAllVisual: "Все", filterDesignVisual: "Графический дизайн", filterPhotoVisual: "Фотография", filterOutfitVisual: "Дизайн одежды"
+  }
+};
+
+Object.entries(interfaceTranslations).forEach(([lang, values]) => Object.assign(i18nData[lang], values));
+
+const sectionWordCycles = {
+  id: { spatial: { main: ["Membaca Ruang,", "Menganalisis Data Wilayah,", "Dari Citra Satelit,"], accent: ["Merancang Masa Depan.", "Menentukan Arah Kebijakan.", "Menjadi Keputusan Tepat."] }, design: { main: ["Ruang untuk Menampilkan", "Dari Konsep Menuju", "Detail yang Dirancang,"], accent: ["Karakter", "Identitas Visual", "Kesan yang Melekat."] } },
+  en: { spatial: { main: ["Reading Places,", "Analysing Regional Data,", "From Satellite Imagery,"], accent: ["Shaping Tomorrow.", "Guiding Better Decisions.", "To Clearer Insights."] }, design: { main: ["A Space to Show", "From Concept to", "Details That Create"], accent: ["Character.", "Visual Identity.", "A Lasting Impression."] } },
+  ja: { spatial: { main: ["地域を読み解き、", "地域データを分析し、", "衛星画像から、"], accent: ["未来を描く。", "より良い判断へ。", "確かな洞察へ。"] }, design: { main: ["個性を見せるための", "コンセプトから", "丁寧に仕上げた"], accent: ["空間。", "ビジュアルアイデンティティへ。", "印象を残すディテール。"] } },
+  ko: { spatial: { main: ["공간을 읽고,", "지역 데이터를 분석하고,", "위성 영상에서,"], accent: ["미래를 설계합니다.", "더 나은 결정을 이끕니다.", "명확한 통찰로 이어집니다."] }, design: { main: ["개성을 보여주는", "콘셉트에서", "세심하게 설계한"], accent: ["공간.", "시각 아이덴티티로.", "오래 남는 디테일."] } },
+  ru: { spatial: { main: ["Читая пространство,", "Анализируя данные регионов,", "По спутниковым снимкам,"], accent: ["Проектируем будущее.", "Находим верное направление.", "Приходим к ясным выводам."] }, design: { main: ["Пространство, чтобы показать", "От идеи к", "Детали, которые создают"], accent: ["характер.", "визуальной айдентике.", "запоминающийся образ."] } }
+};
+
 // Typewriter Roles per Language
 const typewriterRoles = {
   id: [

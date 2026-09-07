@@ -48,8 +48,8 @@
 
       <ul class="nav-menu" id="nav-menu">
         <li class="nav-item"><a href="#home" class="nav-link active" data-i18n="navHome">Home</a></li>
-        <li class="nav-item"><a href="#spatial-work" class="nav-link">Spatial Work</a></li>
-        <li class="nav-item"><a href="#design-studio" class="nav-link">Design Studio</a></li>
+            <li class="nav-item"><a href="#spatial-work" class="nav-link" data-i18n="navSpatial">Spatial Work</a></li>
+            <li class="nav-item"><a href="#design-studio" class="nav-link" data-i18n="navDesign">Design Studio</a></li>
         <li class="nav-item"><a href="#experience" class="nav-link" data-i18n="navExperience">Experience</a></li>
         <li class="nav-item"><a href="#about" class="nav-link" data-i18n="navAbout">About</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
@@ -137,12 +137,12 @@
       <div class="container">
         <!-- SPATIAL WORK INTRO -->
         <section class="spatial-showcase" id="spatial-work" aria-labelledby="spatial-intro-title">
-          <h2 id="spatial-intro-title" class="word-rotator" data-word-cycle='["Membaca Ruang,","Menganalisis Data Wilayah,","Dari Citra Satelit,"]' data-word-accent='["Merancang Masa Depan.","Menentukan Arah Kebijakan.","Menjadi Keputusan Tepat."]'>
+          <h2 id="spatial-intro-title" class="word-rotator" data-word-i18n="spatial">
             <span class="animate-word-main">Membaca Ruang,</span>
             <br />
             <em class="animate-word-accent">Merancang Masa Depan.</em>
           </h2>
-          <p class="spatial-subtitle">Analisis geospasial untuk memahami wilayah, mengenali pola, dan menghasilkan keputusan perencanaan yang bermakna.</p>
+          <p class="spatial-subtitle" data-i18n="spatialSubtitle">Analisis geospasial untuk memahami wilayah, mengenali pola, dan menghasilkan keputusan perencanaan yang bermakna.</p>
           <div class="spatial-image-reveal" id="spatialRevealContainer" aria-label="Peta dunia dan visual kota tiga dimensi">
             <img src="images/gis/world.webp" alt="Peta dunia sebagai dasar analisis spasial" class="spatial-layer spatial-base-image" loading="lazy" decoding="async" />
             <img src="images/gis/city.webp" alt="Visual kota tiga dimensi untuk perencanaan urban" class="spatial-layer spatial-reveal-image" loading="lazy" decoding="async" />
@@ -151,20 +151,20 @@
 
         <div class="project-discipline project-discipline-gis" id="gis-projects">
           <div class="discipline-heading">
-            <h3>GIS <span class="amp">&</span> <em>Spatial Analysis</em></h3>
-            <p>Pemetaan Tematik, Analisis Keruangan, dan Pengolahan Data Geospasial.</p>
+            <h3 data-i18n="gisHeading">GIS <span class="amp">&</span> <em>Spatial Analysis</em></h3>
+            <p data-i18n="gisDescription">Pemetaan Tematik, Analisis Keruangan, dan Pengolahan Data Geospasial.</p>
           </div>
           <div class="projects-grid projects-grid-detail" id="gis-projects-grid"></div>
         </div>
 
         <!-- DESIGN STUDIO INTRO -->
         <section class="studio-showcase" id="design-studio" aria-labelledby="design-intro-title">
-          <h2 id="design-intro-title" class="word-rotator" data-word-cycle='["Ruang untuk Menampilkan","Dari Konsep Menuju","Detail yang Dirancang,"]' data-word-accent='["Karakter","Identitas Visual","Kesan yang Melekat."]'>
+          <h2 id="design-intro-title" class="word-rotator" data-word-i18n="design">
             <span class="animate-word-main">Ruang untuk Menampilkan</span>
             <br />
             <em class="animate-word-accent">Karakter</em>
           </h2>
-          <p class="studio-copy">Identitas merek, visual kampanye, hingga apparel setiap karya dirancang agar memiliki karakter yang mudah dikenali dan terasa dekat.</p>
+          <p class="studio-copy" data-i18n="designCopy">Identitas merek, visual kampanye, hingga apparel setiap karya dirancang agar memiliki karakter yang mudah dikenali dan terasa dekat.</p>
           <div class="studio-gallery" aria-label="Pilihan karya studio desain">
             <figure class="studio-piece studio-piece-1"><img src="images/design/galfik/profil.webp" alt="Eksplorasi identitas GK" loading="lazy" decoding="async" /></figure>
             <figure class="studio-piece studio-piece-2"><img src="images/design/morvethic/btr.webp" alt="Karya desain visual" loading="lazy" decoding="async" /></figure>
@@ -177,14 +177,14 @@
 
         <div class="project-discipline project-discipline-visual" id="design-projects">
           <div class="discipline-heading">
-            <h3>Graphic <span class="amp">&</span> <em>Creative</em></h3>
-            <p>Identitas Merek (Branding <span class="amp">&</span> Logo), Desain Poster, Technical Apparel, Web Design, dan Media Visual.</p>
+            <h3 data-i18n="visualHeading">Graphic <span class="amp">&</span> <em>Creative</em></h3>
+            <p data-i18n="visualDescription">Identitas Merek (Branding <span class="amp">&</span> Logo), Desain Poster, Technical Apparel, Web Design, dan Media Visual.</p>
           </div>
           <div class="filter-bar" aria-label="Filter karya visual">
-            <button class="filter-btn active" data-filter="all">Semua</button>
-            <button class="filter-btn" data-filter="design"><i class="fa-solid fa-pen-nib"></i> Desain Grafis </button>
-            <button class="filter-btn" data-filter="photo"><i class="fa-solid fa-camera"></i> Fotografi</button>
-            <button class="filter-btn" data-filter="outfit"><i class="fa-solid fa-shirt"></i> Desain Baju</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filterAllVisual">Semua</button>
+            <button class="filter-btn" data-filter="design"><i class="fa-solid fa-pen-nib"></i> <span data-i18n="filterDesignVisual">Desain Grafis</span></button>
+            <button class="filter-btn" data-filter="photo"><i class="fa-solid fa-camera"></i> <span data-i18n="filterPhotoVisual">Fotografi</span></button>
+            <button class="filter-btn" data-filter="outfit"><i class="fa-solid fa-shirt"></i> <span data-i18n="filterOutfitVisual">Desain Baju</span></button>
           </div>
           <div class="projects-grid projects-grid-visual" id="visual-projects-grid"></div>
         </div>
@@ -628,9 +628,9 @@
   </div>
 
   <!-- JAVASCRIPT SCRIPTS -->
-  <script src="js/translations.js"></script>
-  <script src="js/projects-data.js"></script>
-  <script src="js/topo-canvas.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/translations.js?v=20260907-i18n"></script>
+    <script src="js/projects-data.js?v=20260907-i18n"></script>
+    <script src="js/topo-canvas.js?v=20260907-i18n"></script>
+    <script src="js/main.js?v=20260907-i18n"></script>
 </body>
 </html>
