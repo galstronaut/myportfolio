@@ -499,11 +499,11 @@ const i18nData = {
 
 const interfaceTranslations = {
   id: {
-    navSpatial: "Karya Spasial", navDesign: "Studio Desain",
+    navSpatial: "Spatial Work", navDesign: "Design Studio",
     spatialSubtitle: "Analisis geospasial untuk memahami wilayah, mengenali pola, dan menghasilkan keputusan perencanaan yang bermakna.",
-    gisHeading: "GIS <span class=\"amp\">&</span> <em>Analisis Spasial</em>", gisDescription: "Pemetaan tematik, analisis keruangan, dan pengolahan data geospasial.",
+    gisHeading: "GIS <span class=\"amp\">&</span> <em>Spatial Analysis</em>", gisDescription: "Pemetaan tematik, analisis keruangan, dan pengolahan data geospasial.",
     designCopy: "Identitas merek, visual kampanye, hingga apparel dirancang agar setiap karya punya karakter yang mudah dikenali dan terasa dekat.",
-    visualHeading: "Grafis <span class=\"amp\">&</span> <em>Kreatif</em>", visualDescription: "Identitas merek, desain poster, apparel teknis, web design, dan media visual.",
+    visualHeading: "Graphic <span class=\"amp\">&</span> <em>Creative</em>", visualDescription: "Identitas merek, desain poster, apparel teknis, web design, dan media visual.",
     filterAllVisual: "Semua", filterDesignVisual: "Desain Grafis", filterPhotoVisual: "Fotografi", filterOutfitVisual: "Desain Baju", viewProject: "Lihat Proyek",
     photoSeriesLabel: "SERI FOTO / 2024–2026", photoGalleryTitle: "Melalui Lensa Saya<span class=\"amp\">&</span>Dunia dalam Bingkai", photoGalleryIntro: "Pilih satu foto untuk membaca ceritanya dan berinteraksi.", photoCategories: "Kategori foto", photoAll: "Semua", photoHorizon: "Horizon", photoOcean: "Laut", photoNature: "Alam", photoFragments: "Fragmen", photoArchitecture: "Arsitektur", photoCloseGallery: "Tutup galeri", photoBackToGallery: "Kembali ke galeri", photoPrevious: "Foto sebelumnya", photoNext: "Foto berikutnya", photoActions: "Interaksi foto", photoLike: "Sukai foto", photoComments: "Komentar", photoShare: "Bagikan foto", photoSend: "Kirim", photoCommentPlaceholder: "Tulis komentar...", photoNoComments: "Belum ada komentar. Jadilah yang pertama."
   },

@@ -656,6 +656,45 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "architecture-08", img: "images/fotografi/architecture/20260613_223115.webp", title: "Siluet Peradaban Malam", type: "Architecture", category: "architecture", desc: "Ketika lampu-lampu kota mulai menyala, garis arsitektur menjelma siluet puitis yang membelah kegelapan." }
   ];
 
+  // The gallery content has its own copy because each photograph needs to change
+  // with the selected interface language as well as the gallery controls.
+  const photoLocalizedTitles = {
+    en: {
+      "horizon-01": "Whispers of Orange Light", "horizon-02": "The Quiet Edge of Midnight", "horizon-03": "Equatorial Twilight Dance", "horizon-04": "When the Sky Holds Dusk", "horizon-05": "Pink Notes on the Horizon", "horizon-06": "A Door of Time by the Sea",
+      "ocean-01": "Endless Ripples on the Reef", "ocean-02": "The Deep Blue Sea", "ocean-03": "Song of White Foam", "ocean-04": "Stillness in the Night Current", "ocean-05": "Tide Marks at Time's Edge", "ocean-06": "Golden Dawn Offshore", "ocean-07": "Breaking Morning Waves", "ocean-08": "Coastal Marble Gradients", "ocean-09": "The Embrace of Rocky Headland", "ocean-10": "Guardian of the Ocean's Edge", "ocean-11": "The Rhythm of the Waves", "ocean-12": "Golden Light by the Water", "ocean-13": "A Hut Waiting for Sea Mist", "ocean-14": "Crystal Clarity of the Sea",
+      "nature-01": "Song of the Green Forest", "nature-02": "A Hidden Natural Bloom", "nature-03": "Morning's Pure Dew", "nature-04": "A Silent Misty Valley", "nature-05": "The Quiet Breath of Night", "nature-06": "Equatorial Lines of Life", "nature-07": "Tropical Valley Panorama", "nature-08": "Blue Hues Beyond the Island", "nature-09": "Light Between the Branches",
+      "fragments-01": "Fragments of Time Preserved", "fragments-02": "Pieces of Spatial Memory",
+      "architecture-01": "Geometry of Urban Space", "architecture-02": "A Symphony of Steel and Concrete", "architecture-03": "Rhythm of Lines and Shadows", "architecture-04": "Monument to the City Explorer", "architecture-05": "Reflections on a Modern Facade", "architecture-06": "Breathing Room in the City", "architecture-07": "The Silent Tower Peak", "architecture-08": "Silhouette of a Nighttime City"
+    },
+    ja: {
+      "horizon-01": "橙の光のささやき", "horizon-02": "真夜中の静かな境界", "horizon-03": "赤道の夕暮れの舞", "horizon-04": "空が夕暮れを抱くとき", "horizon-05": "水平線のピンクの旋律", "horizon-06": "海辺の時の扉",
+      "ocean-01": "珊瑚礁の果てない波紋", "ocean-02": "深い青の海", "ocean-03": "白い泡の歌", "ocean-04": "夜の潮流の静けさ", "ocean-05": "時の岸辺の潮の跡", "ocean-06": "沖合の黄金の夜明け", "ocean-07": "朝に砕ける波", "ocean-08": "海岸の大理石のようなグラデーション", "ocean-09": "岩礁岬の抱擁", "ocean-10": "海の境界を守る者", "ocean-11": "波のリズム", "ocean-12": "水辺の黄金の光", "ocean-13": "海霧を待つ小屋", "ocean-14": "海の水晶の透明さ",
+      "nature-01": "緑の森の歌", "nature-02": "隠れた自然の花", "nature-03": "朝の清らかな露", "nature-04": "霧に包まれた静かな谷", "nature-05": "夜の静かな息づかい", "nature-06": "赤道の生命線", "nature-07": "熱帯の谷のパノラマ", "nature-08": "島の向こうの青い色合い", "nature-09": "枝の間から差す光",
+      "fragments-01": "残された時の断片", "fragments-02": "空間の記憶のかけら",
+      "architecture-01": "都市空間の幾何学", "architecture-02": "鋼とコンクリートの交響曲", "architecture-03": "線と影のリズム", "architecture-04": "都市を旅する人の記念碑", "architecture-05": "現代的なファサードの反射", "architecture-06": "街の中の呼吸する空間", "architecture-07": "静かな塔の頂", "architecture-08": "夜の都市のシルエット"
+    },
+    ko: {
+      "horizon-01": "주황빛의 속삭임", "horizon-02": "한밤의 고요한 경계", "horizon-03": "적도 황혼의 춤", "horizon-04": "하늘이 노을을 품을 때", "horizon-05": "수평선 위 분홍빛 선율", "horizon-06": "바다 끝 시간의 문",
+      "ocean-01": "산호 해안의 끝없는 물결", "ocean-02": "푸른 바다의 깊이", "ocean-03": "하얀 물거품의 노래", "ocean-04": "밤 조류의 고요", "ocean-05": "시간의 가장자리에 남은 밀물 자국", "ocean-06": "먼바다의 황금빛 새벽", "ocean-07": "아침에 부서지는 파도", "ocean-08": "해안의 대리석빛 그라데이션", "ocean-09": "바위 곶의 포옹", "ocean-10": "바다 경계의 수호자", "ocean-11": "파도의 리듬", "ocean-12": "물가의 황금빛", "ocean-13": "바다 안개를 기다리는 오두막", "ocean-14": "수정처럼 맑은 바다",
+      "nature-01": "푸른 숲의 노래", "nature-02": "숨은 자연의 꽃", "nature-03": "아침의 맑은 이슬", "nature-04": "안개 낀 고요한 계곡", "nature-05": "밤의 조용한 숨결", "nature-06": "적도의 생명선", "nature-07": "열대 계곡의 파노라마", "nature-08": "섬 너머의 푸른 빛", "nature-09": "나뭇가지 사이의 빛",
+      "fragments-01": "보존된 시간의 조각", "fragments-02": "공간 기억의 파편",
+      "architecture-01": "도시 공간의 기하학", "architecture-02": "강철과 콘크리트의 교향곡", "architecture-03": "선과 그림자의 리듬", "architecture-04": "도시 탐험가의 기념비", "architecture-05": "현대 파사드의 반사", "architecture-06": "도시 속 숨 쉬는 공간", "architecture-07": "고요한 탑의 꼭대기", "architecture-08": "밤 도시의 실루엣"
+    },
+    ru: {
+      "horizon-01": "Шёпот оранжевого света", "horizon-02": "Тихая грань полуночи", "horizon-03": "Танец экваториальных сумерек", "horizon-04": "Когда небо обнимает закат", "horizon-05": "Розовая мелодия горизонта", "horizon-06": "Дверь времени у моря",
+      "ocean-01": "Вечная рябь у кораллового берега", "ocean-02": "Глубина синего моря", "ocean-03": "Песня белой пены", "ocean-04": "Тишина ночного течения", "ocean-05": "Следы прилива на краю времени", "ocean-06": "Золотой рассвет в открытом море", "ocean-07": "Утренние разбивающиеся волны", "ocean-08": "Мраморные градиенты побережья", "ocean-09": "Объятие скалистого мыса", "ocean-10": "Хранитель края океана", "ocean-11": "Ритм волн", "ocean-12": "Золотой свет у воды", "ocean-13": "Хижина в ожидании морского тумана", "ocean-14": "Хрустальная прозрачность моря",
+      "nature-01": "Песня зелёного леса", "nature-02": "Скрытый цветок природы", "nature-03": "Чистая утренняя роса", "nature-04": "Тихая долина в тумане", "nature-05": "Тихое дыхание ночи", "nature-06": "Экваториальные линии жизни", "nature-07": "Панорама тропической долины", "nature-08": "Синие оттенки за островом", "nature-09": "Свет между ветвями",
+      "fragments-01": "Сохранённые фрагменты времени", "fragments-02": "Части пространственной памяти",
+      "architecture-01": "Геометрия городского пространства", "architecture-02": "Симфония стали и бетона", "architecture-03": "Ритм линий и теней", "architecture-04": "Памятник исследователю города", "architecture-05": "Отражения современного фасада", "architecture-06": "Пространство для дыхания в городе", "architecture-07": "Вершина тихой башни", "architecture-08": "Силуэт ночного города"
+    }
+  };
+  const photoLocalizedDescriptions = {
+    en: { horizon: "A quiet horizon study, where changing light gives the landscape its own sense of time.", ocean: "A coastal moment shaped by moving water, shifting light, and the open rhythm of the sea.", nature: "A close look at nature's texture, light, and calm presence.", fragments: "A small detail that invites a slower look at the textures and traces around us.", architecture: "An observation of form, material, and light within the built environment." },
+    ja: { horizon: "移ろう光が風景に固有の時間を与える、静かな水平線の記録です。", ocean: "動く水、移り変わる光、そして広い海のリズムが形づくる海辺の一場面です。", nature: "自然が見せる質感、光、静かな存在感に目を向けた一枚です。", fragments: "身の回りに残る質感や痕跡を、ゆっくり見つめ直すための小さな断片です。", architecture: "建築空間における形、素材、光の関係を捉えた一枚です。" },
+    ko: { horizon: "변화하는 빛이 풍경에 고유한 시간을 더하는 고요한 수평선의 기록입니다.", ocean: "움직이는 물결과 변하는 빛, 넓은 바다의 리듬이 빚어낸 해안의 한 장면입니다.", nature: "자연의 질감과 빛, 고요한 존재감을 가까이에서 바라본 사진입니다.", fragments: "주변에 남은 질감과 흔적을 천천히 바라보게 하는 작은 장면입니다.", architecture: "건축 환경 속 형태와 재료, 빛의 관계를 담아낸 사진입니다." },
+    ru: { horizon: "Тихое наблюдение за горизонтом, где меняющийся свет придаёт пейзажу собственное ощущение времени.", ocean: "Момент на побережье, созданный движением воды, изменчивым светом и открытым ритмом моря.", nature: "Взгляд на фактуру, свет и спокойное присутствие природы.", fragments: "Небольшая деталь, которая предлагает внимательнее увидеть окружающие нас фактуры и следы.", architecture: "Наблюдение за формой, материалом и светом в архитектурной среде." }
+  };
+
   const photoGalleryModal = document.getElementById("photo-gallery-modal");
   const photoDetailModal = document.getElementById("photo-detail-modal");
   const photoSeriesGrid = document.getElementById("photo-series-grid");
@@ -687,14 +726,23 @@ document.addEventListener("DOMContentLoaded", () => {
     return i18nData[currentLang]?.[key] || category;
   }
 
+  function photoText(photo) {
+    if (currentLang === "id") return { title: photo.title, desc: photo.desc };
+    return {
+      title: photoLocalizedTitles[currentLang]?.[photo.id] || photo.title,
+      desc: photoLocalizedDescriptions[currentLang]?.[photo.category] || photo.desc
+    };
+  }
+
   function updatePhotoDetail(photo) {
     if (!photo) return;
     activePhoto = photo;
+    const text = photoText(photo);
     photoDetailImage.src = photo.img;
-    photoDetailImage.alt = photo.title;
-    photoDetailTitle.textContent = photo.title;
+    photoDetailImage.alt = text.title;
+    photoDetailTitle.textContent = text.title;
     photoDetailKicker.textContent = photoCategoryLabel(photo.category).toUpperCase();
-    photoDetailDescription.textContent = photo.desc;
+    photoDetailDescription.textContent = text.desc;
     renderPhotoInteractions();
   }
 
@@ -727,12 +775,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!photoSeriesGrid) return;
     activePhotoFilter = filter;
     const visiblePhotos = filter === "all" ? photoSeries : photoSeries.filter((photo) => photo.category === filter);
-    photoSeriesGrid.innerHTML = visiblePhotos.map((photo, index) => `
+    photoSeriesGrid.innerHTML = visiblePhotos.map((photo, index) => {
+      const text = photoText(photo);
+      return `
       <button class="photo-series-card" type="button" data-photo-id="${photo.id}">
-        <img src="${photo.img}" alt="${photo.title}" loading="lazy" />
+        <img src="${photo.img}" alt="${text.title}" loading="lazy" />
         <span class="photo-series-card-index">0${index + 1}</span>
-        <span class="photo-series-card-copy"><strong>${photo.title}</strong><em>${photoCategoryLabel(photo.category)}</em></span>
-      </button>`).join("");
+        <span class="photo-series-card-copy"><strong>${text.title}</strong><em>${photoCategoryLabel(photo.category)}</em></span>
+      </button>`;
+    }).join("");
     photoSeriesGrid.querySelectorAll(".photo-series-card").forEach((card) => {
       card.addEventListener("click", () => openPhotoDetail(card.dataset.photoId));
     });
