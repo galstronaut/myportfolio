@@ -75,7 +75,7 @@ const projectsData = [
           ru: "Классификация опасности цунами"
         },
         descs: {
-          id: "Peta klasifikasi tingkat kerawanan bencana tsunami di Kecamatan Pangandaran terbagi menjadi 3 tingkatan sesuai legenda peta: Rendah (hijau), Sedang (kuning), dan Tinggi (merah), dilengkapi deliniasi batas desa dan batas kecamatan.",
+          id: "Peta ini menunjukkan tiga tingkat kerawanan tsunami di Kecamatan Pangandaran: rendah (hijau), sedang (kuning), dan tinggi (merah). Batas desa serta kecamatan turut ditampilkan agar pola risiko di setiap wilayah lebih mudah dibaca.",
           en: "Tsunami hazard classification map for Pangandaran District categorized into 3 levels according to the map legend: Low (green), Moderate (yellow), and High (red), along with village and district administrative boundaries.",
           ja: "地図の凡例に基づくパンガンダラン地区の津波危険度分類マップ：低（緑）、中（黄）、高（赤）の3段階評価、ならびに村および地区の行政境界を表示。",
           ko: "지도 범례에 따른 팡안다란 지역 쓰나미 취약도 분류 지도: 낮음(녹색), 보통(노란색), 높음(빨간색) 3단계 구분 및 마을·지역 행정 경계 표시.",
@@ -85,14 +85,14 @@ const projectsData = [
       {
         img: "images/gis/tsunami/amatan.webp",
         titles: {
-          id: "amatan",
+          id: "Peta Sebaran Indeks Kerawanan Tsunami",
           en: "amatan",
           ja: "amatan",
           ko: "amatan",
           ru: "amatan"
         },
         descs: {
-          id: "Peta kerawanan bencana tsunami amatan menampilkan sebaran indeks nilai kerawanan kontinu sesuai legenda peta: High bernilai 1 (merah) hingga Low bernilai 0,271812 (hijau), serta batas desa dan batas kecamatan.",
+          id: "Peta ini memperlihatkan sebaran indeks kerawanan tsunami di Kecamatan Pangandaran melalui gradasi warna. Area merah menunjukkan nilai kerawanan tertinggi, lalu berangsur ke kuning dan hijau pada area yang lebih rendah. Batas desa dan kecamatan membantu membaca persebaran risikonya.",
           en: "Observed tsunami hazard map displaying the continuous vulnerability index based on the map legend: High at 1 (red) to Low at 0.271812 (green), alongside village and district boundaries.",
           ja: "地図凡例に基づく津波災害脆弱性観測マップ：High（1、赤）からLow（0.271812、緑）までの連続インデックス分布、および村・地区の行政境界を表示。",
           ko: "지도 범례에 따른 쓰나미 관측 취약성 지도: High 1(빨간색)부터 Low 0.271812(녹색)까지의 연속 위험 지수 분포 및 마을·지역 경계 표시.",
