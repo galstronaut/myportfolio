@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myportfolio</title>
+  <meta name="description" content="Portfolio profesional Galih Akbar Fathurohman - Memadukan Analisis Geospasial (GIS), Perencanaan Wilayah & Kota, serta Desain Grafis Kreatif." />
+  <link rel="icon" type="image/png" href="images/profile/g_logo.png" />
+  <link rel="apple-touch-icon" href="images/profile/g_logo.png" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,500;1,600;1,700&family=Great+Vibes&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- BACKGROUND SUBTLE FLOW CANVAS (POLOS TANPA KOTAK-KOTAK) -->
+  <canvas id="topo-canvas"></canvas>
+
+  <!-- PRELOADER / WELCOME SCREEN -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="images/brand/nav-logo.png" onerror="this.src='images/profile/g_logo.png'" alt="Logo Galih Akbar Fathurohman" class="preloader-logo" />
+      <h1 class="welcome-title"><span data-i18n="preloaderTitle">INITIALIZING</span> <em class="portfolio-word">Portfolio</em></h1>
+      <p class="welcome-sub" data-i18n="preloaderSub">GALIH AKBAR FATHUROHMAN - GIS & DESAIN</p>
+      <div class="preloader-bar-wrapper">
+        <div class="preloader-bar-fill" id="preloader-fill"></div>
+      </div>
+      <div class="preloader-coords" id="preloader-coords">LAT: -7.7012 S | LON: 108.6521 E | INITIALIZING... 0%</div>
+    </div>
+  </div>
+
+  <!-- FLOATING CENTERED NAVBAR (CLEAN LOGO ONLY & 5-LANGUAGES SELECTOR) -->
+  <header class="navbar-wrapper">
+    <nav class="floating-navbar">
+      <!-- Clean Brand: Only Logo Image (No text) -->
+      <a href="#home" class="nav-brand" title="Galih Akbar Fathurohman">
+        <img src="images/brand/nav-logo.png" onerror="this.src='images/brand/logo-gk.png'" alt="Brand Logo" class="nav-logo-img" />
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link active" data-i18n="navHome">Home</a></li>
+        <li class="nav-item"><a href="#spatial-work" class="nav-link">Spatial Work</a></li>
+        <li class="nav-item"><a href="#design-studio" class="nav-link">Design Studio</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link" data-i18n="navExperience">Experience</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link" data-i18n="navAbout">About</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Dropdown Switcher (5 Languages) -->
+        <div class="lang-dropdown-wrapper">
+          <button id="lang-toggle-btn" class="lang-toggle-btn" title="Ganti Bahasa / Select Language">
+            <i class="fa-solid fa-globe"></i>
+            <span id="current-lang-label">ID</span>
+            <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i>
+          </button>
+          <div class="lang-menu" id="lang-menu">
+            <button class="lang-option-btn active" data-lang="id">Indonesia (ID)</button>
+            <button class="lang-option-btn" data-lang="en">English (EN)</button>
+            <button class="lang-option-btn" data-lang="ja">日本語 (JA)</button>
+            <button class="lang-option-btn" data-lang="ko">한국어 (KO)</button>
+            <button class="lang-option-btn" data-lang="ru">Русский (RU)</button>
+          </div>
+        </div>
+
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="theme-toggle-btn" title="Ganti Tema">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+
+        <button id="nav-mobile-toggle" class="nav-mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="hero-stars" aria-hidden="true">
+      <span class="star star-1"></span>
+      <span class="star star-2"></span>
+      <span class="star star-3"></span>
+      <span class="star star-4"></span>
+      <span class="star star-5"></span>
+      <span class="star star-6"></span>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Open for GIS Collaboration <span class="amp">&</span> Design Services</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span>Spatial Thinking <span class="hero-times">&times;</span></span> <br />
+              <span class="calligraphy-accent">Visual Creativity</span>
+            </h1>
+
+            <p class="hero-desc" id="hero-desc-typing" data-typing-text="Menghubungkan ketelitian data peta dengan estetika visual. Dari olah data wilayah hingga eksekusi konsep desain.">Menghubungkan ketelitian data peta dengan estetika visual. Dari olah data wilayah hingga eksekusi konsep desain.</p>
+
+            <div class="hero-actions">
+              <a href="#spatial-work" class="btn btn-primary">
+                <span>Explore Spatial Work</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="hero-metrics spatial-metrics">
+              <div class="metric-item"><span class="metric-num" data-counter-value="98" data-counter-suffix="%">0</span><span class="metric-label" data-i18n="metric1">Akurasi Analisis</span></div>
+              <div class="metric-item"><span class="metric-num" data-counter-value="60" data-counter-suffix="+">0</span><span class="metric-label" data-i18n="metric2">Cakupan Survei</span></div>
+              <div class="metric-item"><span class="metric-num" data-counter-value="1500000" data-counter-format="compact" data-counter-suffix="+">0</span><span class="metric-label" data-i18n="metric3">Dataset Diolah</span></div>
+              <div class="metric-item"><span class="metric-num" data-counter-value="4" data-counter-suffix="+">0</span><span class="metric-label" data-i18n="metric4">Proyek</span></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <!-- SPATIAL WORK INTRO -->
+        <section class="spatial-showcase" id="spatial-work" aria-labelledby="spatial-intro-title">
+          <h2 id="spatial-intro-title" class="word-rotator" data-word-cycle='["Membaca Ruang,","Menganalisis Data Wilayah,","Dari Citra Satelit,"]' data-word-accent='["Merancang Masa Depan.","Menentukan Arah Kebijakan.","Menjadi Keputusan Tepat."]'>
+            <span class="animate-word-main">Membaca Ruang,</span>
+            <br />
+            <em class="animate-word-accent">Merancang Masa Depan.</em>
+          </h2>
+          <p class="spatial-subtitle">Analisis geospasial untuk memahami wilayah, mengenali pola, dan menghasilkan keputusan perencanaan yang bermakna.</p>
+          <div class="spatial-image-reveal" id="spatialRevealContainer" aria-label="Peta dunia dan visual kota tiga dimensi">
+            <img src="images/gis/world.png" alt="Peta dunia sebagai dasar analisis spasial" class="spatial-layer spatial-base-image" />
+            <img src="images/gis/city.png" alt="Visual kota tiga dimensi untuk perencanaan urban" class="spatial-layer spatial-reveal-image" />
+          </div>
+        </section>
+
+        <div class="project-discipline project-discipline-gis" id="gis-projects">
+          <div class="discipline-heading">
+            <h3>GIS <span class="amp">&</span> <em>Spatial Analysis</em></h3>
+            <p>Pemetaan Tematik, Analisis Keruangan, dan Pengolahan Data Geospasial.</p>
+          </div>
+          <div class="projects-grid projects-grid-detail" id="gis-projects-grid"></div>
+        </div>
+
+        <!-- DESIGN STUDIO INTRO -->
+        <section class="studio-showcase" id="design-studio" aria-labelledby="design-intro-title">
+          <h2 id="design-intro-title" class="word-rotator" data-word-cycle='["Ruang untuk Menampilkan","Dari Konsep Menuju","Detail yang Dirancang,"]' data-word-accent='["Karakter","Identitas Visual","Kesan yang Melekat."]'>
+            <span class="animate-word-main">Ruang untuk Menampilkan</span>
+            <br />
+            <em class="animate-word-accent">Karakter</em>
+          </h2>
+          <p class="studio-copy">Identitas merek, visual kampanye, hingga apparel setiap karya dirancang agar memiliki karakter yang mudah dikenali dan terasa dekat.</p>
+          <div class="studio-gallery" aria-label="Pilihan karya studio desain">
+            <figure class="studio-piece studio-piece-1"><img src="images/design/galfik/profil.png" alt="Eksplorasi identitas GK" /></figure>
+            <figure class="studio-piece studio-piece-2"><img src="images/design/morvethic/btr.jpeg" alt="Karya desain visual" /></figure>
+            <figure class="studio-piece studio-piece-3"><img src="images/design/gv.jpg" alt="Presentasi identitas merek Morvethic" /></figure>
+            <figure class="studio-piece studio-piece-4"><img src="images/outfit/model2.png" alt="Eksplorasi desain apparel" /></figure>
+            <figure class="studio-piece studio-piece-5"><img src="images/design/morvethic/mvt.png" alt="Eksplorasi logo GK" /></figure>
+            <figure class="studio-piece studio-piece-6"><img src="images/design/galfik/gk3.jpg" alt="Karya desain GK" /></figure>
+          </div>
+        </section>
+
+        <div class="project-discipline project-discipline-visual" id="design-projects">
+          <div class="discipline-heading">
+            <h3>Graphic <span class="amp">&</span> <em>Creative</em></h3>
+            <p>Identitas Merek (Branding <span class="amp">&</span> Logo), Desain Poster, Technical Apparel, Web Design, dan Media Visual.</p>
+          </div>
+          <div class="filter-bar" aria-label="Filter karya visual">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="design"><i class="fa-solid fa-pen-nib"></i> Desain Grafis </button>
+            <button class="filter-btn" data-filter="photo"><i class="fa-solid fa-camera"></i> Fotografi</button>
+            <button class="filter-btn" data-filter="outfit"><i class="fa-solid fa-shirt"></i> Desain Baju</button>
+          </div>
+          <div class="projects-grid projects-grid-visual" id="visual-projects-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <h2 class="section-title"><span data-i18n="experienceTitle">Pengalaman <span class="amp">&</span></span> <em data-i18n="experienceTitleAccent">Kolaborasi</em></h2>
+        <p class="section-desc" data-i18n="experienceDesc">Pilih perusahaan untuk melihat peran dan pengalaman kerja.</p>
+
+        <div class="experience-collaboration">
+          <div class="collab-grid">
+            <div class="collab-partner-card" data-collab-id="collab-geotama"><img src="images/perusahaan/mgi.png" onerror="this.src='images/brand/nav-logo.png'" alt="PT Mitra Geotama" class="partner-logo-img" /><div class="partner-info"><strong>PT. Mitra Geotama Indonesia</strong><span>Konsultan Geospasial <span class="amp">&</span> Pemetaan</span></div></div>
+            <div class="collab-partner-card" data-collab-id="collab-kso"><img src="images/perusahaan/kso.png" onerror="this.src='images/brand/nav-logo.png'" alt="KJSB Muchamad Masykur dan Rekan" class="partner-logo-img" /><div class="partner-info"><strong>KJSB Muchamad Masykur dan Rekan (KSO)</strong><span>Surveyor ILASPP 2025</span></div></div>
+            <div class="collab-partner-card" data-collab-id="collab-uty"><img src="images/perusahaan/uty.png" onerror="this.src='images/brand/nav-logo.png'" alt="UTY" class="partner-logo-img" /><div class="partner-info"><strong>Univ. Teknologi Yogyakarta</strong><span>PWK <span class="amp">&</span> Riset Spasial Bencana</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title"><span data-i18n="aboutTitle">Tentang Saya <span class="amp">&</span></span> <em data-i18n="aboutTitleAccent">Keahlian</em></h2>
+        <p class="section-desc" data-i18n="aboutDesc">Lulusan Perencanaan Wilayah dan Kota dengan pengalaman pada analisis geospasial, survei lapangan, serta pengembangan komunikasi visual.</p>
+
+        <div class="about-grid">
+          <!-- Profile Card Left -->
+          <div class="about-profile-card">
+            <div class="profile-img-frame image-reveal-container" id="revealContainer">
+              <img src="images/profile/profil.png" onerror="this.src='images/profile/profil1.jpg'" alt="Galih Akbar Fathurohman" class="layer-image base-image" id="baseImg" />
+              <img src="images/profile/robot2.png" onerror="this.src='images/profile/kesatria.png'" alt="Futuristic Robot Avatar" class="layer-image reveal-image" id="revealImg" />
+            </div>
+            <h3 class="profile-name">Galih Akbar <em>Fathurohman</em></h3>
+            <span class="profile-role-tag" data-i18n="aboutRole">S.PWK | GIS Analyst <span class="amp">&</span> Creative Designer</span>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; margin-bottom: 8px;" data-i18n="aboutDegree">
+              Universitas Teknologi Yogyakarta (IPK: 3.66 / 4.00)
+            </p>
+
+            <!-- Combined Single CV Action Button -->
+            <div class="cv-action-bar">
+              <a href="CV_Galih_Akbar_Fathurohman.pdf" target="_blank" rel="noopener" class="btn-cv-combined" title="Buka & Unduh CV">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-i18n="cvBtn">Lihat / Unduh CV</span>
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+              </a>
+            </div>
+
+            <div class="profile-contact-quick">
+              <a href="mailto:galihakbar3012@gmail.com" class="quick-icon-btn app-email" title="Kirim Email"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/galihfathurohman" target="_blank" rel="noopener" class="quick-icon-btn app-linkedin" title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/graffiello_v?igsi=dGIyZnV3N3lqYzc4" target="_blank" rel="noopener" class="quick-icon-btn app-instagram" title="Instagram @graffiello_v"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://wa.me/6282117328028" target="_blank" rel="noopener" class="quick-icon-btn app-whatsapp" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Right Content: Bio & Certificates & Software Icons -->
+          <div class="about-right-content">
+            <p class="about-bio-text" data-i18n="aboutBio1">
+              Saya lulusan <strong>Perencanaan Wilayah dan Kota</strong> dengan pengalaman dalam pengolahan data geospasial, pemetaan tutupan lahan, dan survei lapangan. Dalam pekerjaan, saya menggunakan <strong>ArcGIS, QGIS, dan Avenza Maps</strong> untuk interpretasi citra, digitasi, analisis spasial, serta penyusunan peta tematik.
+            </p>
+            <p class="about-bio-text" style="margin-top:-16px;" data-i18n="aboutBio2">
+              Saya juga mengembangkan minat pada <strong>desain grafis, fotografi, dan apparel design</strong>. Latar lintas disiplin ini membantu saya menyusun informasi teknis menjadi visual yang jelas, terstruktur, dan relevan dengan kebutuhan komunikasi proyek.
+            </p>
+
+            <!-- Interactive Certificates Drawer/Bar -->
+            <div class="certs-container-box">
+              <div class="certs-header">
+                <h3><i class="fa-solid fa-award"></i> <span data-i18n="certsTitle">Sertifikasi <span class="amp">&</span> Kredensial Resmi</span></h3>
+              </div>
+              <div class="certs-grid">
+                <div class="cert-card-bar" data-cert-id="cert-1">
+                  <div class="cert-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                  <div class="cert-info">
+                    <strong>ArcGIS Pro <span class="amp">&</span> Spatial Analyst</strong>
+                    <span>Esri Competency</span>
+                  </div>
+                </div>
+
+                <div class="cert-card-bar" data-cert-id="cert-2">
+                  <div class="cert-icon"><i class="fa-solid fa-city"></i></div>
+                  <div class="cert-info">
+                    <strong>Urban <span class="amp">&</span> Regional Planning</strong>
+                    <span>Spatial Planning</span>
+                  </div>
+                </div>
+
+                <div class="cert-card-bar" data-cert-id="cert-3">
+                  <div class="cert-icon"><i class="fa-solid fa-draw-polygon"></i></div>
+                  <div class="cert-info">
+                    <strong>Cartography <span class="amp">&</span> Spatial Data</strong>
+                    <span>Mapping & Database</span>
+                  </div>
+                </div>
+
+                <div class="cert-card-bar" data-cert-id="cert-4">
+                  <div class="cert-icon"><i class="fa-solid fa-palette"></i></div>
+                  <div class="cert-info">
+                    <strong>Creative Suite <span class="amp">&</span> Graphic Design</strong>
+                    <span>Visual Masterclass</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Software & Tools (Crisp SVG Grid) -->
+            <div class="skills-container-box">
+              <h4 class="skills-category-title"><i class="fa-solid fa-laptop-code"></i> <span data-i18n="softwareTitle">Software <span class="amp">&</span> Tools Utama</span></h4>
+              <div class="software-icon-grid">
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/arcgis.svg" alt="Logo ArcGIS" /></div>
+                  <div class="software-card-name">ArcGIS</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/qgis.svg" alt="Logo QGIS" /></div>
+                  <div class="software-card-name">QGIS</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/vscode.png" alt="Logo Visual Studio Code" /></div>
+                  <div class="software-card-name">VS Code</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/lightroom.svg" alt="Logo Lightroom" /></div>
+                  <div class="software-card-name">Lightroom</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/after-effects.svg" alt="Logo After Effects" /></div>
+                  <div class="software-card-name">After Effects</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/photoshop.svg" onerror="this.src='images/software/adobe-photoshop.svg'" alt="Logo Adobe Photoshop" /></div>
+                  <div class="software-card-name">Photoshop</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/premiere-pro.svg" onerror="this.src='images/software/adobe-premiere-pro.svg'" alt="Logo Adobe Premiere Pro" /></div>
+                  <div class="software-card-name">Premiere Pro</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/figma.png" alt="Logo Figma" /></div>
+                  <div class="software-card-name">Figma</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/coreldraw.svg" alt="Logo CorelDRAW" /></div>
+                  <div class="software-card-name">CorelDraw</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/sketchup.png" alt="Logo SketchUp" /></div>
+                  <div class="software-card-name">SketchUp</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/canva.png" alt="Logo Canva" /></div>
+                  <div class="software-card-name">Canva</div>
+                </div>
+                <div class="software-icon-card">
+                  <div class="software-card-icon"><img src="images/software/microsoft-office.svg" alt="Logo Microsoft Office" /></div>
+                  <div class="software-card-name">Microsoft Office</div>
+                </div>
+              </div>
+
+              <h4 class="skills-category-title"><i class="fa-solid fa-sliders"></i> <span data-i18n="compTitle">Kompetensi Teknis</span></h4>
+              <div class="competency-chips-grid">
+                <span class="comp-chip"><i class="fa-solid fa-check"></i> <span data-i18n="comp1">Analisis Spasial <span class="amp">&</span> Pemodelan Inundasi</span></span>
+                <span class="comp-chip"><i class="fa-solid fa-check"></i> <span data-i18n="comp2">Klasifikasi Tutupan Lahan Multispektral</span></span>
+                <span class="comp-chip"><i class="fa-solid fa-check"></i> <span data-i18n="comp3">Kartografi <span class="amp">&</span> Tata Letak Peta Tematik</span></span>
+                <span class="comp-chip"><i class="fa-solid fa-check"></i> <span data-i18n="comp4">Survei Lapangan <span class="amp">&</span> GPS Plotting</span></span>
+                <span class="comp-chip"><i class="fa-solid fa-check"></i> <span data-i18n="comp5">Brand Identity <span class="amp">&</span> Technical Apparel</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title"><span data-i18n="contactTitle">Mari Terhubung <span class="amp">&</span></span> <em data-i18n="contactTitleAccent">Berkolaborasi</em></h2>
+        <p class="section-desc" data-i18n="contactDesc">Tertarik untuk berkolaborasi dalam proyek pemetaan spasial, riset wilayah, atau kreasi desain grafis dan apparel? Jangan ragu untuk menghubungi saya.</p>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 8px;" data-i18n="contactDirectTitle">Informasi Kontak Langsung</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500;" data-i18n="contactDirectDesc">Siap membantu mewujudkan visi spasial dan visual proyek Anda.</p>
+
+            <div class="contact-direct-list">
+              <a href="mailto:galihakbar3012@gmail.com" class="contact-item-row app-email">
+                <div class="contact-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-detail-text">
+                  <strong data-i18n="contactEmailLabel">Email Resmi</strong>
+                  <span>galihakbar3012@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://wa.me/6282117328028" target="_blank" rel="noopener" class="contact-item-row app-whatsapp">
+                <div class="contact-icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="contact-detail-text">
+                  <strong data-i18n="contactPhoneLabel">WhatsApp / Telepon</strong>
+                  <span>+62 821-1732-8028</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/galihfathurohman" target="_blank" rel="noopener" class="contact-item-row app-linkedin">
+                <div class="contact-icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="contact-detail-text">
+                  <strong>LinkedIn</strong>
+                  <span>linkedin.com/in/galihfathurohman</span>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/graffiello_v?igsi=dGIyZnV3N3lqYzc4" target="_blank" rel="noopener" class="contact-item-row app-instagram">
+                <div class="contact-icon-circle"><i class="fa-brands fa-instagram"></i></div>
+                <div class="contact-detail-text">
+                  <strong>Instagram</strong>
+                  <span>@graffiello_v</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form (Submits directly to galihakbar3012@gmail.com) -->
+          <div class="contact-form-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 8px;" data-i18n="contactFormTitle">Kirimkan Pesan</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); font-weight: 500; margin-bottom: 22px;" data-i18n="contactFormDesc">Silakan isi formulir di bawah ini untuk memulai diskusi.</p>
+
+            <form id="contact-form" action="https://formsubmit.co/galihakbar3012@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Pesan Baru dari Portofolio Galih Akbar" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              
+              <div class="form-group">
+                <label class="form-label" for="form-name" data-i18n="formName">Nama Lengkap</label>
+                <input type="text" name="name" id="form-name" class="form-control" data-i18n="formNamePh" placeholder="Masukkan nama Anda..." required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email" data-i18n="formEmail">Alamat Email</label>
+                <input type="email" name="email" id="form-email" class="form-control" data-i18n="formEmailPh" placeholder="contoh@domain.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-subject" data-i18n="formSubject">Subjek / Topik Proyek</label>
+                <input type="text" name="subject" id="form-subject" class="form-control" data-i18n="formSubjectPh" placeholder="Misal: Kolaborasi Pemetaan Spasial / Desain Brand" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message" data-i18n="formMsg">Pesan Anda</label>
+                <textarea name="message" id="form-message" class="form-control" rows="4" data-i18n="formMsgPh" placeholder="Ceritakan detail proyek atau pertanyaan Anda..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <span data-i18n="formSubmit">Kirim Pesan Sekarang</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div id="form-status" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text" data-i18n="footerText">
+          &copy; 2026 <strong>Galih Akbar Fathurohman</strong>. All Rights Reserved. Built with Precision <span class="amp">&</span> Aesthetics.
+        </p>
+        <a href="#home" class="back-to-top-btn" title="Kembali ke Atas">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAIL MODAL -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-container-split">
+      <div class="modal-left-visual">
+        <img id="modal-slider-img" src="" alt="Project Preview" class="modal-slider-img" />
+        <button class="slider-arrow-btn slider-prev-btn" id="slider-prev-btn" aria-label="Sebelumnya">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-arrow-btn slider-next-btn" id="slider-next-btn" aria-label="Selanjutnya">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="slider-counter-pill" id="modal-counter-pill" style="display: none;">01 / 04</div>
+      </div>
+
+      <div class="modal-right-content">
+        <button class="modal-close-btn-round" id="modal-close-btn" aria-label="Tutup">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div>
+          <div class="modal-category-tag" id="modal-category-tag">PROJECT / GIS <span class="amp">&</span> SPATIAL</div>
+          <h2 class="modal-title-bold" id="modal-title-bold">Pangandaran Tsunami Vulnerability</h2>
+          <p class="modal-desc-body" id="modal-desc-body"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO SERIES GALLERY -->
+  <div class="modal-backdrop photo-gallery-backdrop" id="photo-gallery-modal" role="dialog" aria-modal="true" aria-labelledby="photo-gallery-title">
+    <section class="photo-gallery-panel">
+      <button class="photo-modal-close" id="photo-gallery-close" aria-label="Tutup galeri"><i class="fa-solid fa-xmark"></i></button>
+      <div class="photo-gallery-heading">
+        <p>PHOTO SERIES / 2024–2026</p>
+        <h2 id="photo-gallery-title">Through My Lens<span class="amp">&</span>A World in Frames</h2>
+        <span>Pilih satu potret untuk melihat cerita dan berinteraksi.</span>
+      </div>
+      <div class="photo-gallery-filters" id="photo-gallery-filters" aria-label="Photo categories">
+        <button class="photo-gallery-filter active" type="button" data-photo-filter="all">All</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="horizon">Horizon</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="ocean">Ocean</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="nature">Nature</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="fragments">Fragments</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="architecture">Architecture</button>
+      </div>
+      <div class="photo-series-grid" id="photo-series-grid" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <!-- PHOTO DETAIL WITH LIVE INTERACTIONS -->
+  <div class="modal-backdrop photo-detail-backdrop" id="photo-detail-modal" role="dialog" aria-modal="true" aria-labelledby="photo-detail-title">
+    <section class="photo-detail-panel">
+      <button class="photo-modal-close photo-detail-close" id="photo-detail-close" aria-label="Kembali ke galeri"><i class="fa-solid fa-xmark"></i></button>
+      <div class="photo-detail-media">
+        <div class="photo-detail-main-image-wrap">
+          <button class="photo-detail-arrow photo-detail-prev" id="photo-detail-prev" type="button" aria-label="Foto sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+          <img id="photo-detail-image" class="photo-detail-image" src="" alt="" />
+          <button class="photo-detail-arrow photo-detail-next" id="photo-detail-next" type="button" aria-label="Foto berikutnya"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <aside class="photo-detail-sidebar">
+        <div class="photo-detail-copy">
+          <p id="photo-detail-kicker">LANDSCAPE SERIES</p>
+          <h2 id="photo-detail-title"></h2>
+          <span id="photo-detail-description"></span>
+        </div>
+        <div class="photo-actions" aria-label="Interaksi foto">
+          <button class="photo-action" id="photo-like-btn" type="button" aria-label="Sukai foto"><i class="fa-regular fa-heart"></i><span id="photo-like-count">0</span></button>
+          <button class="photo-action" id="photo-comment-toggle" type="button" aria-label="Buka komentar"><i class="fa-regular fa-comment"></i><span id="photo-comment-count">0</span></button>
+          <button class="photo-action" id="photo-share-btn" type="button" aria-label="Bagikan foto"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Bagikan</span></button>
+        </div>
+        <section class="photo-comments" id="photo-comments" aria-label="Komentar" hidden>
+          <div class="photo-comments-list" id="photo-comments-list" aria-live="polite"></div>
+          <form class="photo-comment-form" id="photo-comment-form">
+            <input id="photo-comment-input" maxlength="240" required placeholder="Tulis komentar..." aria-label="Komentar" />
+            <button type="submit">Kirim</button>
+          </form>
+        </section>
+      </aside>
+    </section>
+  </div>
+
+  <!-- CERTIFICATE MODAL VIEWER -->
+  <div class="modal-backdrop" id="cert-modal" role="dialog" aria-modal="true">
+    <div class="modal-container-split cert-modal-container" id="cert-modal-container">
+      <div class="cert-modal-body" id="cert-modal-body">
+        <button class="modal-close-btn-round" id="cert-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+        
+        <!-- Placeholder Icon for certs without scanned document -->
+        <div id="cert-modal-icon-wrap" class="cert-modal-icon-wrap">
+          <i class="fa-regular fa-clock"></i>
+        </div>
+
+        <!-- TOP HEADER: Title first, then Issuer & Status below -->
+        <div class="cert-top-header" id="cert-top-header">
+          <h2 class="modal-title-bold cert-detail-title" id="cert-modal-title"></h2>
+          <div class="cert-detail-meta-row">
+            <div id="cert-modal-issuer" class="cert-detail-issuer"></div>
+            <div id="cert-modal-status" class="cert-detail-status">Belum memiliki sertifikat / belum tersedia</div>
+          </div>
+        </div>
+
+        <!-- Full Certificate Photo Display with Left/Right Arrows -->
+        <div id="cert-modal-img-wrap" class="cert-full-img-wrap" style="display: none;">
+          <button class="slider-arrow-btn cert-arrow-btn cert-prev-btn" id="cert-prev-btn" type="button" aria-label="Sertifikat Sebelumnya">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <img id="cert-modal-img" src="" alt="Sertifikat Resmi" class="cert-full-img" />
+          
+          <button class="slider-arrow-btn cert-arrow-btn cert-next-btn" id="cert-next-btn" type="button" aria-label="Sertifikat Selanjutnya">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- BOTTOM DETAIL: Description -->
+        <div class="cert-detail-info" id="cert-detail-info">
+          <p class="modal-desc-body cert-detail-desc" id="cert-modal-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPANY COLLABORATION MODAL -->
+  <div class="modal-backdrop" id="company-modal" role="dialog" aria-modal="true">
+    <div class="modal-container-split" style="max-width: 650px; grid-template-columns: 1fr;">
+      <div class="modal-right-content" style="padding: 36px;">
+        <button class="modal-close-btn-round" id="company-modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+        
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
+          <img id="company-modal-logo" src="" alt="Company Logo" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border-color);" />
+          <div>
+            <h2 id="company-modal-name" class="modal-title-bold" style="font-size: 1.4rem; margin-bottom: 2px; padding-right: 0;"></h2>
+            <span id="company-modal-tag" style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--text-muted);"></span>
+          </div>
+        </div>
+
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;" id="company-modal-period"></div>
+        <h3 class="company-experience-title" data-i18n="companyExperienceTitle">Keterangan pengalaman</h3>
+        <p class="modal-desc-body" id="company-modal-desc" style="font-size: 0.94rem;"></p>
+        <div class="company-documentation">
+          <h3 class="company-experience-title">Dokumentasi pekerjaan</h3>
+          <div class="company-documentation-grid" id="company-documentation-grid"></div>
+        </div>
+        <a id="company-modal-maplink" href="#" target="_blank" rel="noopener" class="company-map-link" title="Buka Lokasi Perusahaan di Google Maps">
+          <div>
+            <strong><i class="fa-solid fa-location-dot"></i><span data-i18n="mapLocationTitle">Lokasi Kantor / Wilayah</span></strong>
+            <span id="company-modal-location"></span>
+          </div>
+          <div class="map-open-tag"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="mapBtnTag">Buka Maps</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop company-photo-preview-backdrop" id="company-photo-preview" role="dialog" aria-modal="true" aria-label="Pratinjau dokumentasi">
+    <button class="photo-modal-close" id="company-photo-preview-close" aria-label="Tutup pratinjau"><i class="fa-solid fa-xmark"></i></button>
+    <figure class="company-photo-preview-frame">
+      <img id="company-photo-preview-image" src="" alt="" />
+      <figcaption id="company-photo-preview-caption"></figcaption>
+    </figure>
+  </div>
+
+  <!-- JAVASCRIPT SCRIPTS -->
+  <script src="js/translations.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/topo-canvas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

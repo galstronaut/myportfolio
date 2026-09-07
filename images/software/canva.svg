@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="canvaOfficialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C4CC"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#7D2AE8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#canvaOfficialGrad)"/>
+  <!-- Official Canva flowing script C -->
+  <path d="M44.2 27.6c-.6-3.8-3.3-6.6-7.8-6.6-6.8 0-12.8 5.6-12.8 14.1 0 7.5 5.2 12.9 12.2 12.9 4.7 0 8.4-2.4 10.1-5.6.5-.9.1-2.1-.8-2.5-.9-.4-2-.1-2.5.8-1.2 2.2-3.8 3.8-6.8 3.8-5 0-8.5-4-8.5-9.4 0-.6 0-1.2.1-1.8h17.9c1 .1 1.9-.6 2-1.6 0-.7.1-1.4.1-2.1-.1-.7-.6-1.5-1.2-2zm-12.1.8c.4-3.5 2.8-5.2 5.1-5.2 2.6 0 4.4 1.8 4.7 5.2h-9.8z" fill="#FFFFFF"/>
+</svg>
