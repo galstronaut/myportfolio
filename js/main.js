@@ -258,6 +258,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      if (Object.prototype.hasOwnProperty.call(t, key)) el.setAttribute("aria-label", t[key]);
+    });
+
     document.querySelectorAll(".word-rotator[data-word-i18n]").forEach((rotator) => {
       const words = sectionWordCycles[lang]?.[rotator.dataset.wordI18n] || sectionWordCycles.id?.[rotator.dataset.wordI18n];
       if (!words) return;
@@ -285,6 +290,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Re-render dynamic sections
     renderProjects(currentFilter);
+    if (typeof renderPhotoGallery === "function" && photoGalleryModal?.classList.contains("active")) renderPhotoGallery(activePhotoFilter);
+    if (typeof updatePhotoDetail === "function" && photoDetailModal?.classList.contains("active") && activePhoto) updatePhotoDetail(activePhoto);
     if (preloaderFinished) restartTypewriter();
   }
 
@@ -675,13 +682,18 @@ document.addEventListener("DOMContentLoaded", () => {
   let activePhoto = null;
   let activePhotoFilter = "all";
 
+  function photoCategoryLabel(category) {
+    const key = `photo${category.charAt(0).toUpperCase()}${category.slice(1)}`;
+    return i18nData[currentLang]?.[key] || category;
+  }
+
   function updatePhotoDetail(photo) {
     if (!photo) return;
     activePhoto = photo;
     photoDetailImage.src = photo.img;
     photoDetailImage.alt = photo.title;
     photoDetailTitle.textContent = photo.title;
-    photoDetailKicker.textContent = photo.type.toUpperCase();
+    photoDetailKicker.textContent = photoCategoryLabel(photo.category).toUpperCase();
     photoDetailDescription.textContent = photo.desc;
     renderPhotoInteractions();
   }
@@ -709,7 +721,7 @@ document.addEventListener("DOMContentLoaded", () => {
     photoLikeBtn.querySelector("i").className = state.liked ? "fa-solid fa-heart" : "fa-regular fa-heart";
     photoCommentsList.innerHTML = state.comments.length
       ? state.comments.map((comment) => `<article class="photo-comment"><strong>${comment.author}</strong><span>${comment.text}</span></article>`).join("")
-      : '<p class="photo-comment-empty">Belum ada komentar. Jadilah yang pertama.</p>';
+      : `<p class="photo-comment-empty">${i18nData[currentLang]?.photoNoComments || "Belum ada komentar. Jadilah yang pertama."}</p>`;
   }
   function renderPhotoGallery(filter = activePhotoFilter) {
     if (!photoSeriesGrid) return;
@@ -719,7 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="photo-series-card" type="button" data-photo-id="${photo.id}">
         <img src="${photo.img}" alt="${photo.title}" loading="lazy" />
         <span class="photo-series-card-index">0${index + 1}</span>
-        <span class="photo-series-card-copy"><strong>${photo.title}</strong><em>${photo.type}</em></span>
+        <span class="photo-series-card-copy"><strong>${photo.title}</strong><em>${photoCategoryLabel(photo.category)}</em></span>
       </button>`).join("");
     photoSeriesGrid.querySelectorAll(".photo-series-card").forEach((card) => {
       card.addEventListener("click", () => openPhotoDetail(card.dataset.photoId));
@@ -782,7 +794,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   if (photoShareBtn) photoShareBtn.addEventListener("click", async () => {
     const shareData = { title: activePhoto.title, text: activePhoto.desc, url: `${location.href.split("#")[0]}#photo-${activePhoto.id}` };
-    try { if (navigator.share) await navigator.share(shareData); else { await navigator.clipboard.writeText(shareData.url); photoShareBtn.querySelector("span").textContent = "Tersalin"; setTimeout(() => photoShareBtn.querySelector("span").textContent = "Bagikan", 1600); } } catch (_) { /* User may dismiss the native share sheet. */ }
+    try { if (navigator.share) await navigator.share(shareData); else { await navigator.clipboard.writeText(shareData.url); photoShareBtn.querySelector("span").textContent = i18nData[currentLang]?.photoCopied || "Tersalin"; setTimeout(() => photoShareBtn.querySelector("span").textContent = i18nData[currentLang]?.photoShare || "Bagikan", 1600); } } catch (_) { /* User may dismiss the native share sheet. */ }
   });
   window.addEventListener("storage", (event) => { if (event.key === photoStoreKey) renderPhotoInteractions(); });
   if (photoChannel) photoChannel.addEventListener("message", () => renderPhotoInteractions());

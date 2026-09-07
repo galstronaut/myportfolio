@@ -495,19 +495,19 @@
   <!-- PHOTO SERIES GALLERY -->
   <div class="modal-backdrop photo-gallery-backdrop" id="photo-gallery-modal" role="dialog" aria-modal="true" aria-labelledby="photo-gallery-title">
     <section class="photo-gallery-panel">
-      <button class="photo-modal-close" id="photo-gallery-close" aria-label="Tutup galeri"><i class="fa-solid fa-xmark"></i></button>
+      <button class="photo-modal-close" id="photo-gallery-close" aria-label="Tutup galeri" data-i18n-aria="photoCloseGallery"><i class="fa-solid fa-xmark"></i></button>
       <div class="photo-gallery-heading">
-        <p>PHOTO SERIES / 2024–2026</p>
-        <h2 id="photo-gallery-title">Through My Lens<span class="amp">&</span>A World in Frames</h2>
-        <span>Pilih satu potret untuk melihat cerita dan berinteraksi.</span>
+        <p data-i18n="photoSeriesLabel">PHOTO SERIES / 2024–2026</p>
+        <h2 id="photo-gallery-title" data-i18n="photoGalleryTitle">Through My Lens<span class="amp">&</span>A World in Frames</h2>
+        <span data-i18n="photoGalleryIntro">Pilih satu potret untuk melihat cerita dan berinteraksi.</span>
       </div>
-      <div class="photo-gallery-filters" id="photo-gallery-filters" aria-label="Photo categories">
-        <button class="photo-gallery-filter active" type="button" data-photo-filter="all">All</button>
-        <button class="photo-gallery-filter" type="button" data-photo-filter="horizon">Horizon</button>
-        <button class="photo-gallery-filter" type="button" data-photo-filter="ocean">Ocean</button>
-        <button class="photo-gallery-filter" type="button" data-photo-filter="nature">Nature</button>
-        <button class="photo-gallery-filter" type="button" data-photo-filter="fragments">Fragments</button>
-        <button class="photo-gallery-filter" type="button" data-photo-filter="architecture">Architecture</button>
+      <div class="photo-gallery-filters" id="photo-gallery-filters" aria-label="Photo categories" data-i18n-aria="photoCategories">
+        <button class="photo-gallery-filter active" type="button" data-photo-filter="all" data-i18n="photoAll">All</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="horizon" data-i18n="photoHorizon">Horizon</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="ocean" data-i18n="photoOcean">Ocean</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="nature" data-i18n="photoNature">Nature</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="fragments" data-i18n="photoFragments">Fragments</button>
+        <button class="photo-gallery-filter" type="button" data-photo-filter="architecture" data-i18n="photoArchitecture">Architecture</button>
       </div>
       <div class="photo-series-grid" id="photo-series-grid" aria-live="polite"></div>
     </section>
@@ -516,12 +516,12 @@
   <!-- PHOTO DETAIL WITH LIVE INTERACTIONS -->
   <div class="modal-backdrop photo-detail-backdrop" id="photo-detail-modal" role="dialog" aria-modal="true" aria-labelledby="photo-detail-title">
     <section class="photo-detail-panel">
-      <button class="photo-modal-close photo-detail-close" id="photo-detail-close" aria-label="Kembali ke galeri"><i class="fa-solid fa-xmark"></i></button>
+      <button class="photo-modal-close photo-detail-close" id="photo-detail-close" aria-label="Kembali ke galeri" data-i18n-aria="photoBackToGallery"><i class="fa-solid fa-xmark"></i></button>
       <div class="photo-detail-media">
         <div class="photo-detail-main-image-wrap">
-          <button class="photo-detail-arrow photo-detail-prev" id="photo-detail-prev" type="button" aria-label="Foto sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="photo-detail-arrow photo-detail-prev" id="photo-detail-prev" type="button" aria-label="Foto sebelumnya" data-i18n-aria="photoPrevious"><i class="fa-solid fa-chevron-left"></i></button>
           <img id="photo-detail-image" class="photo-detail-image" src="" alt="" />
-          <button class="photo-detail-arrow photo-detail-next" id="photo-detail-next" type="button" aria-label="Foto berikutnya"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="photo-detail-arrow photo-detail-next" id="photo-detail-next" type="button" aria-label="Foto berikutnya" data-i18n-aria="photoNext"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
       <aside class="photo-detail-sidebar">
@@ -530,16 +530,16 @@
           <h2 id="photo-detail-title"></h2>
           <span id="photo-detail-description"></span>
         </div>
-        <div class="photo-actions" aria-label="Interaksi foto">
-          <button class="photo-action" id="photo-like-btn" type="button" aria-label="Sukai foto"><i class="fa-regular fa-heart"></i><span id="photo-like-count">0</span></button>
-          <button class="photo-action" id="photo-comment-toggle" type="button" aria-label="Buka komentar"><i class="fa-regular fa-comment"></i><span id="photo-comment-count">0</span></button>
-          <button class="photo-action" id="photo-share-btn" type="button" aria-label="Bagikan foto"><i class="fa-solid fa-arrow-up-from-bracket"></i><span>Bagikan</span></button>
+        <div class="photo-actions" aria-label="Interaksi foto" data-i18n-aria="photoActions">
+          <button class="photo-action" id="photo-like-btn" type="button" aria-label="Sukai foto" data-i18n-aria="photoLike"><i class="fa-regular fa-heart"></i><span id="photo-like-count">0</span></button>
+          <button class="photo-action" id="photo-comment-toggle" type="button" aria-label="Buka komentar" data-i18n-aria="photoComments"><i class="fa-regular fa-comment"></i><span id="photo-comment-count">0</span></button>
+          <button class="photo-action" id="photo-share-btn" type="button" aria-label="Bagikan foto" data-i18n-aria="photoShare"><i class="fa-solid fa-arrow-up-from-bracket"></i><span data-i18n="photoShare">Bagikan</span></button>
         </div>
         <section class="photo-comments" id="photo-comments" aria-label="Komentar" hidden>
           <div class="photo-comments-list" id="photo-comments-list" aria-live="polite"></div>
           <form class="photo-comment-form" id="photo-comment-form">
-            <input id="photo-comment-input" maxlength="240" required placeholder="Tulis komentar..." aria-label="Komentar" />
-            <button type="submit">Kirim</button>
+            <input id="photo-comment-input" maxlength="240" required placeholder="Tulis komentar..." aria-label="Komentar" data-i18n="photoCommentPlaceholder" data-i18n-aria="photoComments" />
+            <button type="submit" data-i18n="photoSend">Kirim</button>
           </form>
         </section>
       </aside>
@@ -628,9 +628,9 @@
   </div>
 
   <!-- JAVASCRIPT SCRIPTS -->
-    <script src="js/translations.js?v=20260907-i18n"></script>
-    <script src="js/projects-data.js?v=20260907-i18n"></script>
-    <script src="js/topo-canvas.js?v=20260907-i18n"></script>
-    <script src="js/main.js?v=20260907-i18n"></script>
+    <script src="js/translations.js?v=20260907-photo-i18n"></script>
+    <script src="js/projects-data.js?v=20260907-photo-i18n"></script>
+    <script src="js/topo-canvas.js?v=20260907-photo-i18n"></script>
+    <script src="js/main.js?v=20260907-photo-i18n"></script>
 </body>
 </html>
