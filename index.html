@@ -538,6 +538,7 @@
         <section class="photo-comments" id="photo-comments" aria-label="Komentar" hidden>
           <div class="photo-comments-list" id="photo-comments-list" aria-live="polite"></div>
           <form class="photo-comment-form" id="photo-comment-form">
+            <input id="photo-comment-author" maxlength="48" required placeholder="Nama Anda" aria-label="Nama Anda" />
             <input id="photo-comment-input" maxlength="240" required placeholder="Tulis komentar..." aria-label="Komentar" data-i18n="photoCommentPlaceholder" data-i18n-aria="photoComments" />
             <button type="submit" data-i18n="photoSend">Kirim</button>
           </form>
@@ -628,9 +629,10 @@
   </div>
 
   <!-- JAVASCRIPT SCRIPTS -->
-    <script src="js/translations.js?v=20260908-metric-meaning"></script>
-    <script src="js/projects-data.js?v=20260908-metric-meaning"></script>
-    <script src="js/topo-canvas.js?v=20260908-metric-meaning"></script>
-    <script src="js/main.js?v=20260908-metric-meaning"></script>
+    <script src="js/config.js?v=20260908-photo-api"></script>
+    <script src="js/translations.js?v=20260908-photo-api"></script>
+    <script src="js/projects-data.js?v=20260908-photo-backend"></script>
+    <script src="js/topo-canvas.js?v=20260908-photo-backend"></script>
+    <script src="js/main.js?v=20260908-photo-backend"></script>
 </body>
 </html>

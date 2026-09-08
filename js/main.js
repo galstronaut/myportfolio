@@ -714,9 +714,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const photoComments = document.getElementById("photo-comments");
   const photoCommentsList = document.getElementById("photo-comments-list");
   const photoCommentForm = document.getElementById("photo-comment-form");
+  const photoCommentAuthor = document.getElementById("photo-comment-author");
   const photoCommentInput = document.getElementById("photo-comment-input");
   const photoShareBtn = document.getElementById("photo-share-btn");
   const photoStoreKey = "galih_photo_series_interactions_v1";
+  const photoApiBase = window.PHOTO_API_URL || ((location.hostname === "localhost" || location.hostname === "127.0.0.1") ? "http://localhost:8787/api" : "");
+  const photoClientKey = "galih_photo_client_id_v1";
+  let photoClientId = localStorage.getItem(photoClientKey);
+  if (!photoClientId) { photoClientId = crypto.randomUUID(); localStorage.setItem(photoClientKey, photoClientId); }
+  const remotePhotoStates = {};
   const photoChannel = "BroadcastChannel" in window ? new BroadcastChannel("galih-photo-series") : null;
   let activePhoto = null;
   let activePhotoFilter = "all";
@@ -744,14 +750,25 @@ document.addEventListener("DOMContentLoaded", () => {
     photoDetailKicker.textContent = photoCategoryLabel(photo.category).toUpperCase();
     photoDetailDescription.textContent = text.desc;
     renderPhotoInteractions();
+    loadPhotoInteraction(photo.id);
   }
 
   function readPhotoInteractions() {
     try { return JSON.parse(localStorage.getItem(photoStoreKey)) || {}; } catch { return {}; }
   }
   function photoInteraction(photoId) {
+    if (remotePhotoStates[photoId]) return remotePhotoStates[photoId];
     const records = readPhotoInteractions();
     return records[photoId] || { likes: 0, liked: false, comments: [] };
+  }
+  async function loadPhotoInteraction(photoId) {
+    if (!photoApiBase) return;
+    try {
+      const response = await fetch(`${photoApiBase}/photos/${photoId}?clientId=${encodeURIComponent(photoClientId)}`);
+      if (!response.ok) throw new Error("Could not load interaction");
+      remotePhotoStates[photoId] = await response.json();
+      if (activePhoto?.id === photoId) renderPhotoInteractions();
+    } catch (_) { /* The local fallback keeps the gallery usable while offline. */ }
   }
   function savePhotoInteractions(photoId, change) {
     const records = readPhotoInteractions();
@@ -759,6 +776,16 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem(photoStoreKey, JSON.stringify(records));
     if (photoChannel) photoChannel.postMessage({ photoId });
     renderPhotoInteractions();
+  }
+  async function saveRemotePhotoInteraction(photoId, action, payload) {
+    const response = await fetch(`${photoApiBase}/photos/${photoId}/${action}`, {
+      method: action === "like" ? "PUT" : "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ clientId: photoClientId, ...payload })
+    });
+    if (!response.ok) throw new Error("Could not save interaction");
+    remotePhotoStates[photoId] = await response.json();
+    if (activePhoto?.id === photoId) renderPhotoInteractions();
   }
   function renderPhotoInteractions() {
     if (!activePhoto) return;
@@ -830,25 +857,39 @@ document.addEventListener("DOMContentLoaded", () => {
   if (photoDetailClose) photoDetailClose.addEventListener("click", () => closePhotoDetail(true));
   if (photoGalleryModal) photoGalleryModal.addEventListener("click", (event) => { if (event.target === photoGalleryModal) closePhotoGallery(); });
   if (photoDetailModal) photoDetailModal.addEventListener("click", (event) => { if (event.target === photoDetailModal) closePhotoDetail(false); });
-  if (photoLikeBtn) photoLikeBtn.addEventListener("click", () => {
+  if (photoLikeBtn) photoLikeBtn.addEventListener("click", async () => {
     const state = photoInteraction(activePhoto.id);
+    if (photoApiBase) {
+      try { await saveRemotePhotoInteraction(activePhoto.id, "like", { liked: !state.liked }); return; } catch (_) { /* Use local fallback below. */ }
+    }
     savePhotoInteractions(activePhoto.id, { liked: !state.liked, likes: Math.max(0, state.likes + (state.liked ? -1 : 1)) });
   });
   if (photoCommentToggle) photoCommentToggle.addEventListener("click", () => { photoComments.hidden = !photoComments.hidden; if (!photoComments.hidden) photoCommentInput.focus(); });
-  if (photoCommentForm) photoCommentForm.addEventListener("submit", (event) => {
+  if (photoCommentForm) photoCommentForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const name = photoCommentAuthor.value.trim();
     const text = photoCommentInput.value.trim();
-    if (!text || !activePhoto) return;
+    if (!name || !text || !activePhoto) return;
+    if (photoApiBase) {
+      try {
+        await saveRemotePhotoInteraction(activePhoto.id, "comments", { name, text });
+        photoCommentInput.value = "";
+        return;
+      } catch (_) { /* Use local fallback below. */ }
+    }
     const state = photoInteraction(activePhoto.id);
-    savePhotoInteractions(activePhoto.id, { comments: [...state.comments, { author: "Anda", text }] });
+    savePhotoInteractions(activePhoto.id, { comments: [...state.comments, { author: name, text }] });
     photoCommentInput.value = "";
   });
   if (photoShareBtn) photoShareBtn.addEventListener("click", async () => {
-    const shareData = { title: activePhoto.title, text: activePhoto.desc, url: `${location.href.split("#")[0]}#photo-${activePhoto.id}` };
+    const shareUrl = `https://galstronaut.github.io/myportfolio/?photo=${encodeURIComponent(activePhoto.id)}`;
+    const shareData = { title: photoText(activePhoto).title, text: photoText(activePhoto).desc, url: shareUrl };
     try { if (navigator.share) await navigator.share(shareData); else { await navigator.clipboard.writeText(shareData.url); photoShareBtn.querySelector("span").textContent = i18nData[currentLang]?.photoCopied || "Tersalin"; setTimeout(() => photoShareBtn.querySelector("span").textContent = i18nData[currentLang]?.photoShare || "Bagikan", 1600); } } catch (_) { /* User may dismiss the native share sheet. */ }
   });
   window.addEventListener("storage", (event) => { if (event.key === photoStoreKey) renderPhotoInteractions(); });
   if (photoChannel) photoChannel.addEventListener("message", () => renderPhotoInteractions());
+  const sharedPhotoId = new URLSearchParams(location.search).get("photo");
+  if (sharedPhotoId && photoSeries.some((photo) => photo.id === sharedPhotoId)) setTimeout(() => openPhotoDetail(sharedPhotoId), 400);
 
   // 9. CERTIFICATE MODAL VIEWER (TOP TITLE, FULL PHOTO & SLIDER ARROWS)
   const certModal = document.getElementById("cert-modal");

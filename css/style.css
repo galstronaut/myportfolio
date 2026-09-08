@@ -3684,6 +3684,10 @@ h1 .amp, h2 .amp, h3 .amp, h4 .amp,
 .photo-comment-form input::placeholder { color: var(--text-muted); }
 .photo-comment-form button { background: #0a192f; color: #ffffff; }
 
+/* Photo comments require a name before a message can be submitted. */
+.photo-comment-form { flex-wrap: wrap; }
+.photo-comment-form #photo-comment-author { flex-basis: 100%; }
+
 /* The primary navigation uses the same navy in every interaction state. */
 .nav-link:hover,
 .nav-link:focus-visible,
