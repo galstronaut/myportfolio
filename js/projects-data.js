@@ -518,8 +518,8 @@ const projectsData = [
           ru: "Основной логотип и монограмма"
         },
         descs: {
-          id: "Logo utama Galfiks menggabungkan monogram “GK”, aksen bintang, dan nuansa pesisir yang ringan. Dirancang ringkas dan fleksibel, mark ini menjaga karakter merek tetap terbaca pada berbagai ukuran dan media.",
-          en: "The Galfiks primary mark combines the “GK” monogram, a star accent, and a light coastal sensibility. Compact and flexible by design, it keeps the brand character legible across sizes and media.",
+          id: "Logo utama Galfiks membawa rasa tenang, indah, dan hidup yang dekat dengan suasana pesisir. Karakternya dirancang ringan dan elegan, sehingga identitas Galfiks terasa hangat, mudah dikenali, dan tetap relevan di berbagai media.",
+          en: "The Galfiks primary mark carries a sense of calm, beauty, and life shaped by the coast. Light and elegant in character, it gives the identity a warm, recognizable presence that remains effective across different media.",
           ja: "洗練されたアクセサリーラインのために高級感と現代的な優雅さを表現した、ツインスターが輝く『GK』モノグラムのプライマリロゴマーク。",
           ko: "독점 액세서리 라인을 위해 고급스러움과 현대적인 우아함을 전하는 트윈 스타 악센트의 'GK' 모노그램 기본 로고마크 디자인.",
           ru: "Дизайн основного логотипа с монограммой «GK» и акцентом в виде сияющих звезд, отражающий роскошь и элегантность эксклюзивных аксессуаров."
