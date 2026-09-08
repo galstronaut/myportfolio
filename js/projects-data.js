@@ -460,11 +460,11 @@ const projectsData = [
       ru: "Galfiks Accessories"
     },
     excerpts: {
-      id: "Perancangan logo dan identitas visual Galfiks, toko aksesori pantai yang menghadirkan kerang, gelang batu dan kerang, kalung, tas, gantungan, serta berbagai cendera mata bernuansa pesisir.",
-      en: "Logo and visual identity design for Galfiks, a beach-accessories shop offering shells, stone and shell bracelets, necklaces, bags, keychains, and other coastal keepsakes.",
-      ja: "貝、石や貝のブレスレット、ネックレス、バッグ、キーホルダーなどを扱うビーチアクセサリーショップ、Galfiksのロゴとビジュアルアイデンティティデザイン。",
-      ko: "조개, 스톤 및 조개 팔찌, 목걸이, 가방, 키링 등을 선보이는 비치 액세서리숍 Galfiks의 로고 및 비주얼 아이덴티티 디자인.",
-      ru: "Дизайн логотипа и фирменного стиля Galfiks — магазина пляжных аксессуаров с ракушками, браслетами, ожерельями, сумками и брелоками."
+      id: "Perancangan identitas visual Galfiks untuk toko aksesori bernuansa pesisir. Proyek ini mencakup logo, sistem visual, dan penerapannya pada kebutuhan komunikasi serta ruang retail.",
+      en: "A visual identity for Galfiks, a coastal-inspired accessories shop. The project covers the logo, visual system, and its application across communication and retail touchpoints.",
+      ja: "海辺の雰囲気を持つアクセサリーショップ、Galfiksのビジュアルアイデンティティ。ロゴ、ビジュアルシステム、コミュニケーションおよび店舗空間への展開を含むプロジェクトです。",
+      ko: "해안 감성의 액세서리숍 Galfiks를 위한 비주얼 아이덴티티입니다. 로고, 비주얼 시스템, 커뮤니케이션과 리테일 공간 전반의 적용을 담았습니다.",
+      ru: "Визуальная айдентика для Galfiks — магазина аксессуаров с прибрежным настроением. Проект включает логотип, визуальную систему и её применение в коммуникации и розничном пространстве."
     },
     categoryTags: {
       id: "PROJECT / BRAND IDENTITY",
@@ -477,32 +477,32 @@ const projectsData = [
       {
         img: "images/design/galfik/profil.webp",
         titles: {
-          id: "Mockup Toko & Signage Eksterior",
-          en: "Storefront Mockup & Exterior Signage",
-          ja: "店舗モックアップ & 外観サイネージ",
-          ko: "매장 목업 및 외관 사이니지",
-          ru: "Мокап магазина и наружная вывеска"
+          id: "Galfiks — Retail Signage Mockup",
+          en: "Galfiks — Retail Signage Mockup",
+          ja: "Galfiks — 店舗サイネージ・モックアップ",
+          ko: "Galfiks — 리테일 사이니지 목업",
+          ru: "Galfiks — Мокап розничной вывески"
         },
         descs: {
-          id: "Mockup penerapan identitas Galfiks pada fasad toko. Signage utama dan blade sign memperlihatkan bagaimana logo hadir sebagai penanda ruang yang mudah dikenali bagi toko aksesori pantai.",
-          en: "A mockup of Galfiks visual identity on the storefront. The primary signage and blade sign show how the logo becomes a recognizable marker for the beach-accessories shop.",
-          ja: "店舗ファサードにおけるGalfiksアイデンティティのモックアップ。メインサインとブレードサインが、ビーチアクセサリーショップの認識しやすい目印としてロゴを表現します。",
-          ko: "매장 파사드에 적용한 Galfiks 아이덴티티 목업입니다. 메인 사인과 블레이드 사인은 로고를 비치 액세서리숍의 인지하기 쉬운 표식으로 보여줍니다.",
-          ru: "Мокап фирменного стиля Galfiks на фасаде магазина. Главная вывеска и консольный знак делают логотип узнаваемым ориентиром пляжного магазина аксессуаров."
+          id: "Visualisasi penerapan identitas Galfiks pada fasad toko, mencakup signage utama dan blade sign. Mockup ini menunjukkan bagaimana logo bekerja sebagai penanda yang jelas, elegan, dan mudah dikenali dalam konteks retail.",
+          en: "A storefront application of the Galfiks identity, including primary signage and a blade sign. The mockup demonstrates how the logo works as a clear, elegant, and recognizable marker in a retail setting.",
+          ja: "メインサインとブレードサインを含む、店舗ファサードへのGalfiksアイデンティティの展開です。ロゴが小売空間で明快かつ上品で認識しやすい目印として機能する様子を示しています。",
+          ko: "메인 사인과 블레이드 사인을 포함한 매장 파사드의 Galfiks 아이덴티티 적용안입니다. 로고가 리테일 공간에서 명확하고 우아하며 쉽게 인식되는 표식으로 작동하는 모습을 보여줍니다.",
+          ru: "Применение айдентики Galfiks на фасаде магазина: основная вывеска и консольный знак. Мокап показывает, как логотип становится ясным, элегантным и узнаваемым ориентиром в розничном пространстве."
         }
       },
       {
         img: "images/design/galfik/gk2.webp",
         titles: {
-          id: "Poster",
-          en: "Brand Guidelines, Typography & Patterns",
+          id: "Galfiks — Visual Identity System",
+          en: "Galfiks — Visual Identity System",
           ja: "ブランドガイドライン、タイポグラフィ & パターン",
           ko: "브랜드 가이드ライン, 타이포그래피 & 패턴",
           ru: "Руководство по стилю, типографика и паттерны"
         },
         descs: {
-          id: "Poster toko yang menerjemahkan karakter Galfiks ke dalam komunikasi promosi: ringan, elegan, dan dekat dengan suasana pesisir serta koleksi aksesori yang ditawarkan.",
-          en: "A store poster translating the Galfiks character into promotional communication: light, elegant, and close to the coastal atmosphere and accessory collection.",
+          id: "Sistem identitas visual yang menyatukan logo, palet warna, tipografi, dan pola grafis Galfiks. Elemen-elemen ini membentuk pedoman visual yang konsisten untuk materi komunikasi dan kebutuhan aplikasi merek.",
+          en: "A visual identity system bringing together the Galfiks logo, colour palette, typography, and graphic patterns. These elements create a consistent guide for communication materials and brand applications.",
           ja: "セリフ体とスクリプト体のタイポグラフィ階層、カラーパレット（#0A2E50、#FFFFFF、#E1EBF5）、モノグラムロゴ、大理石およびリボンのシームレスパターンを含む包括的ガイドライン。",
           ko: "세리프 및 스크립트 타이포그래피 위계, 컬러 팔레트(#0A2E50, #FFFFFF, #E1EBF5), 모노그램 조합, 럭셔리 대리석 및 패키징 패턴을 규정한 브랜드 가이드라인.",
           ru: "Комплексное руководство по стилю: иерархия шрифтов, палитра цветов (#0A2E50, #FFFFFF, #E1EBF5), варианты логотипа и бесшовные упаковочные паттерны."
@@ -511,15 +511,15 @@ const projectsData = [
       {
         img: "images/design/galfik/gk3.webp",
         titles: {
-          id: "Logo Galfiks — Kupu-Kupu, Bulan & Gelombang",
-          en: "Primary Logomark & Monogram",
+          id: "Galfiks — Primary Logo Mark",
+          en: "Galfiks — Primary Logo Mark",
           ja: "プライマリロゴマーク & モノグラム",
           ko: "기본 로고마크 및 모노그램",
           ru: "Основной логотип и монограмма"
         },
         descs: {
-          id: "Logo minimalis, simpel, dan elegan yang menggambarkan kupu-kupu sedang hinggap pada bulan atau gelombang. Bentuknya mencerminkan keindahan, nuansa pesisir, dan karakter Galfiks yang lembut.",
-          en: "A minimal, simple, elegant logo depicting a butterfly resting on a moon or wave. It reflects beauty, a coastal mood, and the soft character of Galfiks.",
+          id: "Logo utama Galfiks menggabungkan monogram “GK”, aksen bintang, dan nuansa pesisir yang ringan. Dirancang ringkas dan fleksibel, mark ini menjaga karakter merek tetap terbaca pada berbagai ukuran dan media.",
+          en: "The Galfiks primary mark combines the “GK” monogram, a star accent, and a light coastal sensibility. Compact and flexible by design, it keeps the brand character legible across sizes and media.",
           ja: "洗練されたアクセサリーラインのために高級感と現代的な優雅さを表現した、ツインスターが輝く『GK』モノグラムのプライマリロゴマーク。",
           ko: "독점 액세서리 라인을 위해 고급스러움과 현대적인 우아함을 전하는 트윈 스타 악센트의 'GK' 모노그램 기본 로고마크 디자인.",
           ru: "Дизайн основного логотипа с монограммой «GK» и акцентом в виде сияющих звезд, отражающий роскошь и элегантность эксклюзивных аксессуаров."
