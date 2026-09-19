@@ -236,7 +236,7 @@ const projectsData = [
   {
     id: "gis-3",
     category: "gis",
-    date: "Juli - Des 2024",
+    date: "Juli - Desember 2024",
     heroImg: "images/gis/komoditas/profil.webp",
     tools: ["ArcGIS", "QGIS", "Landsat 8", "Google Earth Pro"],
     titles: {
@@ -755,11 +755,11 @@ const collaborationsData = [
       { img: "images/perusahaan/pengalaman/mgi/magang-1.webp", caption: "Sertifikat Magang Mandiri PT. Mitra Geotama Indonesia (Oktober–Desember 2024)." }
     ],
     period: {
-      id: "Jul 2024 - Des 2024",
-      en: "Jul 2024 - Dec 2024",
-      ja: "2024年7月 - 2024年12月",
-      ko: "2024년 7월 - 2024년 12월",
-      ru: "Июль 2024 - Дек 2024"
+      id: "Juli 2024 - Desember 2024",
+      en: "July 2024 - December 2024",
+      ja: "2024年七月 - 2024年十二月",
+      ko: "2024년 칠월 - 2024년 십이월",
+      ru: "Июль 2024 - Декабрь 2024"
     },
     tags: {
       id: "Perusahaan Konsultan Geospasial",
@@ -796,10 +796,10 @@ const collaborationsData = [
     ],
     period: {
       id: "Agustus 2025 - Oktober 2025",
-      en: "Aug 2025 - Oct 2025",
-      ja: "2025年8月 - 2025年10月",
-      ko: "2025년 8월 - 2025년 10월",
-      ru: "Авг 2025 - Окт 2025"
+      en: "August 2025 - October 2025",
+      ja: "2025年八月 - 2025年十月",
+      ko: "2025년 팔월 - 2025년 시월",
+      ru: "Август 2025 - Октябрь 2025"
     },
     tags: {
       id: "Kantor Jasa Surveyor Berlisensi (KSO)",
