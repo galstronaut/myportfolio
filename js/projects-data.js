@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PORTFOLIO DATA (MULTILINGUAL)
  */
 
@@ -788,7 +788,7 @@ const collaborationsData = [
       { img: "images/perusahaan/pengalaman/kso/d2.webp", caption: "Koordinasi teknis tim surveyor pemetaan Zona Nilai Tanah." },
       { img: "images/perusahaan/pengalaman/kso/d3.webp", caption: "Verifikasi lapangan bersama tim ATR/BPN & KJSB Muchamad Masykur." }
     ],
-    period: "Sep 2025 - Okt 2025",
+    period: "Agu 2025 - Okt 2025",
     tags: {
       id: "Kantor Jasa Surveyor Berlisensi (KSO)",
       en: "Licensed Cadastral Surveyor Office (KSO)",
