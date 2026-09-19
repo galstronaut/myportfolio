@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Current Language State
   let currentLang = localStorage.getItem("galih_lang") || "id";
   let preloaderFinished = false;
+  let activeCollab = null;
 
   // 1. PRELOADER LOGIC
   const preloader = document.getElementById("preloader");
@@ -287,6 +288,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const tag = card.querySelector(".partner-info span");
       if (partner && tag) tag.textContent = partner.tags[lang] || partner.tags.id;
     });
+
+    if (activeCollab && document.getElementById("company-modal")?.classList.contains("active")) {
+      const roleText = activeCollab.roles[lang] || activeCollab.roles.id;
+      const periodText = (typeof activeCollab.period === "object" && activeCollab.period !== null)
+        ? (activeCollab.period[lang] || activeCollab.period.id || activeCollab.period.en)
+        : activeCollab.period;
+      const cmPeriod = document.getElementById("company-modal-period");
+      const cmTag = document.getElementById("company-modal-tag");
+      const cmDesc = document.getElementById("company-modal-desc");
+      if (cmPeriod) cmPeriod.textContent = `${roleText} (${periodText})`;
+      if (cmTag) cmTag.textContent = activeCollab.tags[lang] || activeCollab.tags.id;
+      if (cmDesc) cmDesc.textContent = activeCollab.descs[lang] || activeCollab.descs.id;
+    }
 
     // Re-render dynamic sections
     renderProjects(currentFilter);
@@ -1072,8 +1086,12 @@ document.addEventListener("DOMContentLoaded", () => {
       companyModalTag.textContent = col.tags[currentLang] || col.tags.id;
       companyModalLocation.textContent = col.location;
       
+      activeCollab = col;
       const roleText = col.roles[currentLang] || col.roles.id;
-      companyModalPeriod.textContent = `${roleText} (${col.period})`;
+      const periodText = (typeof col.period === "object" && col.period !== null)
+        ? (col.period[currentLang] || col.period.id || col.period.en)
+        : col.period;
+      companyModalPeriod.textContent = `${roleText} (${periodText})`;
       companyModalDesc.textContent = col.descs[currentLang] || col.descs.id;
 
       if (companyDocumentationGrid) {
@@ -1105,6 +1123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (companyModal) {
       companyModal.classList.remove("active");
       document.body.style.overflow = "auto";
+      activeCollab = null;
     }
   }
 

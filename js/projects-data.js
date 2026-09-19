@@ -121,7 +121,7 @@ const projectsData = [
   {
     id: "gis-2",
     category: "gis",
-    date: "Sep - Okt 2025",
+    date: "Agt - Okt 2025",
     heroImg: "images/gis/znt/profil.webp",
     tools: ["ArcGIS", "Avenza Maps", "GPS Garmin", "Geodatabase"],
     titles: {
@@ -754,7 +754,13 @@ const collaborationsData = [
       { img: "images/perusahaan/pengalaman/mgi/kerjapraktik-1.webp", caption: "Sertifikat Kerja Praktik PT. Mitra Geotama Indonesia (Juli–September 2024)." },
       { img: "images/perusahaan/pengalaman/mgi/magang-1.webp", caption: "Sertifikat Magang Mandiri PT. Mitra Geotama Indonesia (Oktober–Desember 2024)." }
     ],
-    period: "Juli 2024 - Des 2024",
+    period: {
+      id: "Jul 2024 - Des 2024",
+      en: "Jul 2024 - Dec 2024",
+      ja: "2024年7月 - 2024年12月",
+      ko: "2024년 7월 - 2024년 12월",
+      ru: "Июль 2024 - Дек 2024"
+    },
     tags: {
       id: "Perusahaan Konsultan Geospasial",
       en: "Geospatial & Surveying Consulting Firm",
@@ -788,7 +794,13 @@ const collaborationsData = [
       { img: "images/perusahaan/pengalaman/kso/d2.webp", caption: "Koordinasi teknis tim surveyor pemetaan Zona Nilai Tanah." },
       { img: "images/perusahaan/pengalaman/kso/d3.webp", caption: "Verifikasi lapangan bersama tim ATR/BPN & KJSB Muchamad Masykur." }
     ],
-    period: "Agu 2025 - Okt 2025",
+    period: {
+      id: "Agt 2025 - Okt 2025",
+      en: "Aug 2025 - Oct 2025",
+      ja: "2025年8月 - 2025年10月",
+      ko: "2025년 8월 - 2025년 10월",
+      ru: "Авг 2025 - Окт 2025"
+    },
     tags: {
       id: "Kantor Jasa Surveyor Berlisensi (KSO)",
       en: "Licensed Cadastral Surveyor Office (KSO)",
@@ -822,7 +834,13 @@ const collaborationsData = [
       { img: "images/perusahaan/pengalaman/uty/d2.webp", caption: "Sidang tugas akhir dan presentasi hasil pemodelan geospasial." },
       { img: "images/perusahaan/pengalaman/uty/d3.webp", caption: "Dokumentasi kelulusan Sarjana Perencanaan Wilayah & Kota UTY." }
     ],
-    period: "2020 - 2025",
+    period: {
+      id: "2020 - 2025",
+      en: "2020 - 2025",
+      ja: "2020年 - 2025年",
+      ko: "2020년 - 2025년",
+      ru: "2020 - 2025"
+    },
     tags: {
       id: "Institusi Pendidikan Tinggi & Riset",
       en: "Higher Education & Research Institution",
