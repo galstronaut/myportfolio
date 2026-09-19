@@ -121,7 +121,7 @@ const projectsData = [
   {
     id: "gis-2",
     category: "gis",
-    date: "Agt - Okt 2025",
+    date: "Agustus - Oktober 2025",
     heroImg: "images/gis/znt/profil.webp",
     tools: ["ArcGIS", "Avenza Maps", "GPS Garmin", "Geodatabase"],
     titles: {
@@ -795,7 +795,7 @@ const collaborationsData = [
       { img: "images/perusahaan/pengalaman/kso/d3.webp", caption: "Verifikasi lapangan bersama tim ATR/BPN & KJSB Muchamad Masykur." }
     ],
     period: {
-      id: "Agt 2025 - Okt 2025",
+      id: "Agustus 2025 - Oktober 2025",
       en: "Aug 2025 - Oct 2025",
       ja: "2025年8月 - 2025年10月",
       ko: "2025년 8월 - 2025년 10월",
